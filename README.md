@@ -22,7 +22,6 @@
 	<span> · </span>
 	<a href="#%EF%B8%8F-skills-developed-at-42cursus">Skills developed at 42cursus</a>
 	<span> · </span>
-	<a href="#-42s-galaxy-curriculum">42's galaxy (curriculum)</a>
 </h3>
 
 ## 🗣️ About 42
