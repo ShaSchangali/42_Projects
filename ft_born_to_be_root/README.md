@@ -127,16 +127,10 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 5. Create a Host Name as your login, with 42 at the end (eg. intraName42) 
 
 6. Leave Domain name blank, press `enter` on Continue.
-	
-![1*81XjZBZg2bbNXunuxgnFPQ](https://user-images.githubusercontent.com/58959408/174729840-a85c3319-3a70-4922-9335-e4bb6f765ee9.png)
 
 7. Create a Password for the Host Name
-	
-![1*ft498oj7syh4zVjI48U_tw](https://user-images.githubusercontent.com/58959408/174729894-d0fc794f-add8-49e7-9015-521f9e93958f.png)
 
 8. Create a User Name without 42 at the end (eg. test_user)
-	
-![1*rhJWnMKN0TPBZwqRey9OeQ](https://user-images.githubusercontent.com/58959408/174729939-06933a35-5dd1-4924-848e-78d2023bb66e.png)
 
 9. Create a Password for the User Name
 
