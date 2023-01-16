@@ -107,15 +107,14 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 13. Click `Start` (The Green Arrow ➡️) to start your Virtual Machine.
 
-## Part 3 - Accessing The Virtual Machine
+## Accessing The Virtual Machine
 
-#### In the Virtual Machine, there is no access to the mouse.
-
-## ⚠️ NOTE: To increase your Virtual Machine size, press `command` + `c` on your Apple Keyboard and use the mouse to drag the screen to the size:
+## In the Virtual Machine, there is no access to the mouse.
+#### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
 
 <img width="666" alt="178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae" src="https://user-images.githubusercontent.com/58959408/181727316-9a16b307-ea00-4116-a20a-261512f63a20.png">
 	
-1. Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install` (This will start the installation proccess).
+1. Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
 
 ![1*-tV-M-4g6MH8h6pWJ27bCg](https://user-images.githubusercontent.com/58959408/174728861-fb9435a5-04e5-402c-80a3-f366c9b51be8.png)
 
@@ -125,7 +124,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 4. Press `enter` on `American English` or your keyboard of preference.
 
-## ⚠️ NOTE: create & use the same password for everything.
+#### ⚠️ NOTE: create & use the same password for everything.
 
 5. Create a Host Name as your login, with 42 at the end (eg. User42) 
 
@@ -143,7 +142,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 9. Create a Password for the User Name
 
-10. Press `enter` on your `Timezone` (The timezone your currently doing this project in).
+10. Press `enter` on your `Timezone`
 
 11. Press `enter` on `Guided - use entire disk and set up encrypted LVM` (Second to last option from the list).
 	
@@ -221,7 +220,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 ![1*riuXLYYgESxdq-lpkivFXQ](https://user-images.githubusercontent.com/58959408/174731601-b5949892-28b5-4b5a-94dd-9b50e6f0662b.png)
 
-#### Before starting Virtual Machine, Host, Username and Password/s saved or written down somewhere.
 
 ## Starting Your Virtual Machine
 
