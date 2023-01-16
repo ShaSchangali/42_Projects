@@ -104,21 +104,21 @@
 
 ## Functions
 
-### Libft
+### FT_Libft
 
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
 
-### Born2beRoot
+### FT_Born2beRoot
 
 This project aims to introduce you to the wonderful world of virtualization.
 Creating a machine in VirtualBox under specific instructions and set up
 a Linux operating system while implementing strict rules in Shell. 
 
-### Printf
+### FT_Printf
 
 This project is pretty straightforward,to recode the printf Functions.
 You will learn what is and how to implement variadic functions.
 
-### Get_next_line
+### FT_Get_next_line
 
 The aim of this project is to make you code a function that returns a line ending with a newline, read from a file descriptor.
