@@ -6,7 +6,7 @@
 
 <p align="center">
 	<b><i>Projects developed at <a href="https://www.42heilbronn.de.br/">42 Heilbronn</a> programming school.</i></b><br>
-	Start date: March/2022 - 42 Hei
+	Start date: March/2022 - 42 Heilbronn
 </p>
 
 <p align="center">
