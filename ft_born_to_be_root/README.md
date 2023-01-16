@@ -218,7 +218,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 4. Type `lsblk` in your Virtual Machine to see the partition
 
 
-## Configurating Your Virtual Machine
+## Configurating The Virtual Machine
 
 ### Installing Sudo
 
