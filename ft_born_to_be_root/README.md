@@ -34,6 +34,8 @@
 - Connecting to Server via FTP
 
 
+
+
 ## Questions & Answers
 
 ### Difference between Debian and CentOS?
@@ -105,11 +107,9 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 12. Click on created `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
 
-13. Click `Start` (The Green Arrow ➡️) to start your Virtual Machine.
+13. Click `Start` (The Green Arrow ➡️) to start Virtual Machine.
 
 ## Accessing The Virtual Machine
-
-## In the Virtual Machine, there is no access to the mouse.
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
 
 <img width="666" alt="178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae" src="https://user-images.githubusercontent.com/58959408/181727316-9a16b307-ea00-4116-a20a-261512f63a20.png">
