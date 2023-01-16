@@ -1,0 +1,69 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   clear_error_functions.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sschanga <sschanga@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/14 02:02:09 by sschanga          #+#    #+#             */
+/*   Updated: 2023/01/15 22:27:16 by sschanga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+void	ft_free_node(t_list **node)
+{
+	t_list	*tmp;
+	t_list	*head;
+
+	head = *node;
+	while (head)
+	{
+		tmp = head->next;
+		free(head);
+		head = tmp;
+	}
+	*node = NULL;
+}
+
+void	free_everything(t_struct *type)
+{
+	if (type->l_a)
+		ft_free_node(&type->l_a);
+	if (type->l_b)
+		ft_free_node(&type->l_b);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		write(1, &str[i++], 1);
+}
+
+void	error(t_struct *type, int n)
+{
+	write(2, "Error\n", 6);
+	if (n == 1)
+		free_everything(type);
+	exit(EXIT_FAILURE);
+}
+
+void	deletestr(char	**a)
+{
+	int		j;
+
+	j = 0;
+	if (!a)
+		return ;
+	while (a[j])
+	{
+		free (a[j]);
+		j++;
+	}
+	free(a);
+	a = NULL;
+}
