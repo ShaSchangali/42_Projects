@@ -1,30 +1,30 @@
-## Born2BeRoot Guide
+## Born2BeRoot Guide 
 
-### Mandotary
+## Mandotary
 This guide has 8 Parts: 
-- Part 0 - Your Born2BeRoot Defence Evaluation with Answers
-- Part 1 - Downloading Your Virtual Machine
-- Part 2 - Installing Your Virtual Machine
-- Part 3 - Starting Your Virtual Machine
-- Part 4 - Configurating Your Virtual Machine
+- Part 0 - Questions & Answers
+- Part 1 - Downloading Virtual Machine
+- Part 2 - Installing Virtual Machine
+- Part 3 - Starting Virtual Machine
+- Part 4 - Configurating Virtual Machine
 - Part 5 - Connecting to SSH
 - Part 6 - Continue Configurating Your Virtual Machine
 - Part 7 - Signature.txt
 - Part 8 - Commands for UFW, Group, Host, lsblk and SSH
 
-### Bonus
+## Bonus
 This guide has 2 Parts:
-Part 0: Installation Lighttpd MariaDB PHP (LLMP) Stack
-Part 1: Installing Lighttpd
-Part 2: Installing & Configuring MariaDB
-Part 3: Installing PHP
-Part 4: Downloading & Configuring WordPress
-Part 5: Configuring Lighttpd
-File Transfer Protocol (FTP)
-Part 1: Installing & Configuring FTP
-Part 2: Connecting to Server via FTP
+- Part 0 - Installation Lighttpd MariaDB PHP (LLMP) Stack
+- Part 1 - Installing Lighttpd
+- Part 2 - Installing & Configuring MariaDB
+- Part 3 - Installing PHP
+- Part 4 - Downloading & Configuring WordPress
+- Part 5 - Configuring Lighttpd
+- File Transfer Protocol (FTP)
+- Part 1 - Installing & Configuring FTP
+- Part 2 - Connecting to Server via FTP
 
-## Part 0 - Born2BeRoot Introduction
+## Part 0 - Questions & Answers
 
 ### Difference between Debian and CentOS?
 Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software. 
@@ -62,33 +62,13 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
 
 
-## Part 1 - Downloading Your Virtual Machine
+## Part 1 - Downloading Virtual Machine
 
 1. Click on this link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 
-2. Scroll to the bottom of the website and click `debian-mac-xx.x.x-amd64-netinst.iso`
+2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 
-### Part 1.1 - Sgoingfre (Only 42 Adelaide Students)
-
-1. Head over to iTerm2
-
-<img width="622" alt="Screen Shot 2022-07-26 at 4 26 06 PM" src="https://user-images.githubusercontent.com/58959408/180943494-9c25b321-4cae-4c39-89bb-92271a245489.png">
-
-2. Then type `cd sgoinfre/students`
-
-<img width="622" alt="Screen Shot 2022-07-26 at 4 26 27 PM" src="https://user-images.githubusercontent.com/58959408/180943649-42dba828-3bd3-45ee-92ea-4e7218d65674.png">
-
-3. Then type `mkdir <your intra username>`
-
-<img width="622" alt="Screen Shot 2022-07-26 at 4 26 38 PM" src="https://user-images.githubusercontent.com/58959408/180943705-d9705f63-59a9-4b2d-9130-75d8711a25d3.png">
-
-4. Then type `chmod 700 <your intra username>`
-
-<img width="622" alt="Screen Shot 2022-07-26 at 4 26 48 PM" src="https://user-images.githubusercontent.com/58959408/180943745-09427be5-f0ff-4100-aaa3-56b4cfcea2af.png">
-
-5. Find your Debian Download from Part 1 - Downloading Your Virtual Machine and put that download in this sgoinfre folder that you have just created.
-
-### Part 1.2 - Virtual Box
+### Part 1.1 - Virtual Box
 
 #### Now head over to Virtual Box to continue on.
 <img width="264" alt="Screen Shot 2022-06-24 at 12 18 12 PM" src="https://user-images.githubusercontent.com/58959408/175452234-79c7f008-10b2-4e4b-a602-95886d9e2508.png">
@@ -105,7 +85,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ![1*tkjZEbnHKqPGN24HQw_kRA](https://user-images.githubusercontent.com/58959408/174700376-2862e8e9-0a7a-4681-af3b-e82dbc7d9aa5.png)
 
-2. Change Machine Folder to `sgoinfre/students/your_intra_login/Virtual Machine Name` and then click `continue` to move to the next step.
+2. Change Machine Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and then click `continue` to move to the next step.
 
 ![1*WyFDl98AZfft999XCKD6kA](https://user-images.githubusercontent.com/58959408/174700651-8dc8e0a9-7709-4202-8a12-12a384ff6e3e.png)
 
@@ -296,32 +276,85 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 ### Part 4.1 - Installing Sudo
 
 1. First type `su -` to login in as the root user.
-2. Then type `apt-get update -y` 
-3. Then type `apt-get upgrade -y` 
-4. Then type `apt install sudo`
-5. Then type `usermod -aG sudo your_username` to add user in the sudo group (To check if user is in sudo group, type `getent group sudo`)
-6. Type `sudo visudo` to open sudoers file
-7. Lastly find - # User privilege specification, type `your_username  	ALL=(ALL) ALL`
+```
+$ su -
+Password:
+#
+```
+2. Type `apt-get update -y`
+```
+# apt-get update -y
+```
+3. Type `apt-get upgrade -y`
+```
+# apt-get upgrade -y
+```
+4. Type `apt install sudo`
+```
+# apt install sudo
+```
+5. Type`usermod -aG sudo your_username` to add user in the sudo group 
+```
+# usermod -aG sudo your_username
+```
+6. Check if user is in sudo group, type `getent group sudo`)
+```
+# getent group sudo
+```
+7. Type `sudo visudo` to open sudoers file
+```
+# sudo visudo
+```
+8. Find - # User privilege specification, type `your_username  	ALL=(ALL) ALL`
+```
+# your_username  	ALL=(ALL)
+```
+
 
 ### Part 4.2 - Installing Git and Vim
 
 1. Then type `apt-get install git -y` to install Git
-2. Then type `git --version` to check the Git Version
+```
+# apt-get install git -y
+```
+2. Then type `apt-get install git -y` to check the Git Version
+```
+# apt-get install git -y
+```
 
 ### Part 4.3 - Installing and Configuring SSH (Secure Shell Host)
 
 1. Type `sudo apt install openssh-server`
+```
+# sudo apt install openssh-server
+```
 2. Type `sudo systemctl status ssh` to check SSH Server Status
+```
+# sudo systemctl status ssh
+```
 3. Type `sudo vim /etc/ssh/sshd_config`
+```
+# sudo vim /etc/ssh/sshd_config
+```
 4. Find this line `#Port22` 
+
 5. Change the line to `Port 4242` without the # (Hash) in front of it
-6. Save and Exit Vim 
-7. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
+
+6. Save and Exit Vim
+
+7. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings 
+are right
+```
+# sudo grep Port /etc/ssh/sshd_config
+```
 8. Lastly type `sudo service ssh restart` to restart the SSH Service 
+```
+# sudo service ssh restart
+```
 
 ### Part 4.4 - Installing and Configuring UFW (Uncomplicated Firewall)
 
-1. First type `apt-get install ufw` to install UFW
+1. Type `apt-get install ufw` to install UFW
 2. Type `sudo ufw enable` to inable UFW
 3. Type `sudo ufw status numbered` to check the status of UFW
 4. Type `sudo ufw allow ssh` to configure the Rules
