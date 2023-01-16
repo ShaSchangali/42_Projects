@@ -1,7 +1,7 @@
 # 42_Projects
 
 <h1 align="center">
-	42cursus
+	42 Cursus
 </h1>
 
 <p align="center">
