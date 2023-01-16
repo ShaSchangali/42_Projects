@@ -220,18 +220,18 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 ### Installing Sudo
 
+1. Login in as the root user.
 ```
-# 1. Login in as the root user
 $ su -
 Password:
 $
 ```
+2. Update the system
 ```
-# 2. Update the system
 $ apt-get update -y
 ```
+3. Upgrade the system
 ```
-# 3. Upgrade the system
 $ apt-get upgrade -y
 ```
 4. Install Sudo 
