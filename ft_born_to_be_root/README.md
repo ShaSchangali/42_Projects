@@ -178,11 +178,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 19. Press enter on `Finish partitioning and write changes to disk`. 
 
-<img width="806" alt="Screen_Shot_2022-09-05_at_5 33 43_PM" src="https://user-images.githubusercontent.com/58959408/188408125-7c93acc1-b37f-4b9f-8189-b3cc4a83da8c.png">
-
 20. Press enter on `Yes` for Partition Disks.
-	
-![1*yfXpHyGD37OGAOX7qs1Avw](https://user-images.githubusercontent.com/58959408/174730895-f70df93e-eb7e-493c-9374-edf58a47408c.png)
 
 21. Press enter on `No` for Configure the package manager.
 	
