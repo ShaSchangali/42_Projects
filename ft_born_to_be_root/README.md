@@ -34,8 +34,6 @@
 - Connecting to Server via FTP
 
 
-
-
 ## Questions & Answers
 
 ### Difference between Debian and CentOS?
@@ -164,7 +162,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 ![1*xE1owXa0ttpvcioaEwnutA](https://user-images.githubusercontent.com/58959408/174730804-796f6db1-8b59-4f8e-900c-1416f957db30.png)
 
-18. Type in `max`and press enter on `Continue` to assign the amount of volume group to use for guided partitioning.
+18. Type in `max`and press enter on `Continue` to assign the amount of volume group for partitioning.
 	
 ![1*SUFMu-qy3rBwIe9B0Bq3kg](https://user-images.githubusercontent.com/58959408/174730857-2de10217-3d42-41ca-8f43-fc91fddb64c6.png)
 
@@ -190,7 +188,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 ![1*1I6fHG3MHuovrarqj9PNnA](https://user-images.githubusercontent.com/58959408/174731301-88d7c53d-f5e2-46c3-b221-a8b40f70f81f.png)
 
-26. Deselect `SSH server` and `standard system utilities` by pressing the `Space key` and then press `enter` on `Continue`.
+26. Deselect `SSH server` and `standard system utilities` by pressing the `Space key` and  press `enter`
 	
 ![1*lGsuAQEwT0WBhb4kdUMp9g](https://user-images.githubusercontent.com/58959408/174731387-b4859ded-9a9f-409a-a9c9-57d1ec77cbfd.png)
 
