@@ -2,13 +2,14 @@
 
 ## Questions & Answers
 - Difference between Debian and CentOS?
+- What is a Virtual Machine?
 - What is the difference between aptitude and APT (Advanced Packaging Tool)?
 - What is AppArmor?
 - Password Rules
 - What is LVM?
-- Part 6 - UFW (Uncomplicated Firewall)
-- Part 7 - What is SSH?
-- Part 8 - What is Cron?
+- UFW (Uncomplicated Firewall)
+- What is SSH?
+- What is Cron?
 
 ## Mandotary
 - Downloading Virtual Machine
@@ -22,15 +23,15 @@
 
 ## Bonus
 #### Installation Lighttpd MariaDB PHP (LLMP)
-- Part 1 - Installing Lighttpd
-- Part 2 - Installing & Configuring MariaDB
-- Part 3 - Installing PHP
-- Part 4 - Downloading & Configuring WordPress
-- Part 5 - Configuring Lighttpd
+- Installing Lighttpd
+- Installing & Configuring MariaDB
+- Installing PHP
+- Downloading & Configuring WordPress
+- Configuring Lighttpd
 
 #### File Transfer Protocol (FTP)
-- Part 1 - Installing & Configuring FTP
-- Part 2 - Connecting to Server via FTP
+- Installing & Configuring FTP
+- Connecting to Server via FTP
 
 
 ## Questions & Answers
@@ -38,7 +39,7 @@
 ### Difference between Debian and CentOS?
 Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software. 
 
-### Difference between Debian and CentOS?
+### What is a Virtual Machine?
 Is a resource that uses software instead of a physical computer to run programs or apps. Each VM has its own operating system and functions separately, so you can have more than one VM per machine. Can be used to test applications in a safe, separate environment. Works by using software to simulate virtual hardware and run on a host machine.
 
 ### What is the difference between aptitude and APT (Advanced Packaging Tool)?
@@ -50,9 +51,9 @@ Is a resource that uses software instead of a physical computer to run programs 
 Linux security system that provides Mandatory Access Control (MAC) security. Allows the system admin to restrict the actions that processes can perform. It is included by default with Debian. Run aa-status to check if it is running.
 
 ### Password Rules
-For the password rules, we use the password quality checking library and there are two files the common-password file which sets the rules like upper and lower case characters, duplicate characters etc and the login.defs file which stores the password expiration rules (30 days etc).
-Sudo nano /etc/login.defs
-Sudo nano /etc/pam.d/common-password
+We using the password quality checking library and there are two files the common-password file which sets the rules like upper and lower case characters, duplicate characters etc and the login.defs file which stores the password expiration rules (30 days etc).
+* Sudo nano /etc/login.defs
+* Sudo nano /etc/pam.d/common-password
 
 ### What is LVM
 Logical Volume Manager – allows us to easily manipulate the partitions or logical volume on a storage device. 
@@ -86,52 +87,31 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 3. Set Memory Size to `1024 MB` and continue.
 
-![1*SoVNIKT340ARlLvQ7RuwDA](https://user-images.githubusercontent.com/58959408/174701125-7a285b0d-7036-4bef-926b-271b0032d7ad.png)
-
 4. Click `Create a Virtual Hard Disk Now` and then click `Create` to create the Hard Disk.
-
-![1*PzVboJLyLTs7qJmgbdoBYA](https://user-images.githubusercontent.com/58959408/174701209-a5d10ea3-c634-4d49-b099-01d538fe0517.png)
 
 5. Click `VDI (VirtualBox Disk Image)` and then click `Continue` to select VDI.
 
-![1*6_D9jIyOW0jE3a6vF_UzXg](https://user-images.githubusercontent.com/58959408/174701340-d84f6c80-e09b-43ae-b31a-6dd5d6306f23.png)
-
 6. Click `Dyamically Allocated` and then click `Continue` to only use space on the Hard Disk.
-
-![1*HagpR-UD0HWCb7zRTeSQXQ](https://user-images.githubusercontent.com/58959408/174744677-eac5b679-49f7-4881-a59b-00a420cbe640.png)
 
 7. Set Size as `12.00 GB` and then click `Continue`.
 
 8. Click `Settings` and then click `Storage` to view the Virtual Machine Storage.
-	
-<img width="1309" alt="Screen Shot 2022-06-24 at 12 51 09 PM" src="https://user-images.githubusercontent.com/58959408/175455682-e1b4c977-2f33-41cf-b3cc-3ad78b3254ce.png">
 
 9. Click on `Optical Drive` (Optical Drive - far right blue small box).
-	
-![1*je75kGWjXl0M6PlqEzHgoA](https://user-images.githubusercontent.com/58959408/174701924-0c69938f-10ec-498f-adec-bacf073b4b99.png)
 
 10. Click on `Choose a disk file...` (2nd option in the drop down).
 	
-![1*VDy31g0tePnUOuJ1cZQsxQ](https://user-images.githubusercontent.com/58959408/174702002-9b4fe4d2-3008-4375-9ec1-57f5e1425eb8.png)
-
 11. Click on the Virtual Machine file (.iso). 
 	
-![1*FOldzHFaQ2JS_phe6z6T4g](https://user-images.githubusercontent.com/58959408/174702161-957eb0b6-2803-407f-b018-c02f7615f027.png)
-
 12. Click on created `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
-	
-![1*Evj7Z2EOq102A1zUVgUnQg](https://user-images.githubusercontent.com/58959408/174702820-824e0acf-f919-4bfb-a619-eea8068fe309.png)
 
 13. Click `Start` (The Green Arrow ➡️) to start your Virtual Machine.
-	
-![1*Yg53c1-01g4VzTqhcVEEcA](https://user-images.githubusercontent.com/58959408/174702806-1bd8fce3-aac6-44b3-84d9-c76252dfecd8.png)
-
 
 ## Part 3 - Accessing The Virtual Machine
 
-#### In the Virtual Machine, you will not have access to your mouse and will only use your Keyboard to operate your Virtual Machine. 
+#### In the Virtual Machine, there is no access to the mouse.
 
-0. To increase your Virtual Machine size, press `command` + `c` on your Apple Keyboard at the same time and then use your mouse to drag the screen to the size you wish or do the following: 
+## ⚠️ NOTE: To increase your Virtual Machine size, press `command` + `c` on your Apple Keyboard and use the mouse to drag the screen to the size:
 
 <img width="666" alt="178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae" src="https://user-images.githubusercontent.com/58959408/181727316-9a16b307-ea00-4116-a20a-261512f63a20.png">
 	
@@ -141,27 +121,19 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 2. Press `enter` on `English - English` or your language of preference.
 
-![1*xeb8quQ-ccd5X51d8ToZRw](https://user-images.githubusercontent.com/58959408/174729529-f51630be-4206-4bfc-a13f-6278c67eb633.png)
-
 3. Press `enter` on `Australia` or the country your installing this Virtual Machine.
-
-![1*WixFq3GJF9OjeH-zTBTN7Q](https://user-images.githubusercontent.com/58959408/174729594-92ba0cdc-483c-4499-84ee-2d8f3b62f0b3.png)
 
 4. Press `enter` on `American English` or your keyboard of preference.
 
-![1*zKUk6R9tls_jiyY81ue8kA](https://user-images.githubusercontent.com/58959408/174729629-4f111978-4fc1-47ae-891f-aea693929480.png)
+## ⚠️ NOTE: create & use the same password for everything.
 
-## ⚠️ NOTE: Whenever you create a password, use the same password as everything.
+5. Create a Host Name as your login, with 42 at the end (eg. User42) 
 
-5. Create a Host Name as your login, with 42 at the end (eg. User42) - write down your Host Name, as you will need this later on.
-	
-![1*r0fzgkzXOjK2DfsBCh7wEQ](https://user-images.githubusercontent.com/58959408/174729750-fbd2d215-b526-42c6-8ff0-b83f886c1f3c.png)
-
-6. Leave this blank, press `enter` on Continue.
+6. Leave Domain name blank, press `enter` on Continue.
 	
 ![1*81XjZBZg2bbNXunuxgnFPQ](https://user-images.githubusercontent.com/58959408/174729840-a85c3319-3a70-4922-9335-e4bb6f765ee9.png)
 
-7. Create a Password for the Host Name  
+7. Create a Password for the Host Name
 	
 ![1*ft498oj7syh4zVjI48U_tw](https://user-images.githubusercontent.com/58959408/174729894-d0fc794f-add8-49e7-9015-521f9e93958f.png)
 
@@ -172,8 +144,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 9. Create a Password for the User Name
 
 10. Press `enter` on your `Timezone` (The timezone your currently doing this project in).
-	
-![1*2i7svoURih_UIlRJ87rj5w](https://user-images.githubusercontent.com/58959408/174730349-76a4e74f-822b-4040-8d95-554d44fcb67c.png)
 
 11. Press `enter` on `Guided - use entire disk and set up encrypted LVM` (Second to last option from the list).
 	
