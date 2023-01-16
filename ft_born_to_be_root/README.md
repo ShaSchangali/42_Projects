@@ -221,7 +221,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ### Installing Sudo
 
 ```
-#Login in as the root user
+# 1. Login in as the root user
 $ su -
 Password:
 $
