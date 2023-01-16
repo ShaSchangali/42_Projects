@@ -226,12 +226,12 @@ $ su -
 Password:
 $
 ```
-2. Update the system
 ```
+# 2. Update the system
 $ apt-get update -y
 ```
-3. Upgrade the system
 ```
+# 3. Upgrade the system
 $ apt-get upgrade -y
 ```
 4. Install Sudo 
