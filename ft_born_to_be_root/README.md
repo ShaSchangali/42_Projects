@@ -218,8 +218,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 ## Configurating The Virtual Machine
 
-### Installing Sudo
-
 #### 1. Login in as the root user.
 ```
 $ su -
