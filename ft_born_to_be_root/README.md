@@ -28,9 +28,10 @@
 - Part 5 - Downloading & Configuring WordPress
 - Part 6 - Configuring Lighttpd
 
-- File Transfer Protocol (FTP)
+#### File Transfer Protocol (FTP)
 - Part 1 - Installing & Configuring FTP
 - Part 2 - Connecting to Server via FTP
+
 
 ## Questions & Answers
 
@@ -81,11 +82,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 1. Click `New`
 
-![1*tkjZEbnHKqPGN24HQw_kRA](https://user-images.githubusercontent.com/58959408/174700376-2862e8e9-0a7a-4681-af3b-e82dbc7d9aa5.png)
-
 2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
-
-![1*WyFDl98AZfft999XCKD6kA](https://user-images.githubusercontent.com/58959408/174700651-8dc8e0a9-7709-4202-8a12-12a384ff6e3e.png)
 
 3. Set Memory Size to `1024 MB` and continue.
 
@@ -104,8 +101,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ![1*HagpR-UD0HWCb7zRTeSQXQ](https://user-images.githubusercontent.com/58959408/174744677-eac5b679-49f7-4881-a59b-00a420cbe640.png)
 
 7. Set Size as `12.00 GB` and then click `Continue`.
-
-![1*rYdYJbPswCVCUa5pwKcRZA](https://user-images.githubusercontent.com/58959408/174745855-73880988-be69-45cc-bb6d-7c6c1a40c1ac.png)
 
 8. Click `Settings` and then click `Storage` to view the Virtual Machine Storage.
 	
@@ -256,9 +251,9 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 ![1*riuXLYYgESxdq-lpkivFXQ](https://user-images.githubusercontent.com/58959408/174731601-b5949892-28b5-4b5a-94dd-9b50e6f0662b.png)
 
-30. Before we move onto starting your Virtual Machine, make sure you have your Host, Username and Password/s saved or written down somewhere. 
+#### Before starting Virtual Machine, Host, Username and Password/s saved or written down somewhere.
 
-## Part 3.1 - Starting Your Virtual Machine
+## Starting Your Virtual Machine
 
 1. Press enter on `Debian GNU/Linux` 
 
@@ -269,68 +264,72 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 4. Type `lsblk` in your Virtual Machine to see the partition
 
 
-## Part 4 - Configurating Your Virtual Machine
+## Configurating Your Virtual Machine
 
-### Part 4.1 - Installing Sudo
+### Installing Sudo
 
-1. First type `su -` to login in as the root user.
+1. Login in as the root user.
 ```
 $ su -
 Password:
 #
 ```
-2. Type `apt-get update -y`
+2. Update the system
 ```
 # apt-get update -y
 ```
-3. Type `apt-get upgrade -y`
+3. Upgrade the system
 ```
 # apt-get upgrade -y
 ```
-4. Type `apt install sudo`
+4. Install Sudo 
 ```
 # apt install sudo
 ```
-5. Type`usermod -aG sudo your_username` to add user in the sudo group 
+5. Verify if sudo was successfully installed
+```
+# dpkg -l | grep sudo.
+```
+6. Add user in the sudo group 
 ```
 # usermod -aG sudo your_username
 ```
-6. Check if user is in sudo group, type `getent group sudo`)
+7. Check if user is in sudo group)
 ```
 # getent group sudo
 ```
-7. Type `sudo visudo` to open sudoers file
+8. Open sudoers file
 ```
 # sudo visudo
 ```
-8. Find - # User privilege specification, type `your_username  	ALL=(ALL) ALL`
+9. Find in sudoers file - # User privilege specification and type 
 ```
-# your_username  	ALL=(ALL)
+# your_username ALL=(ALL)
 ```
 
 
-### Part 4.2 - Installing Git and Vim
+### Installing Git and Vim
 
-1. Then type `apt-get install git -y` to install Git
+1. install Git
 ```
 # apt-get install git -y
 ```
-2. Then type `apt-get install git -y` to check the Git Version
+2. Check Git Version
 ```
-# apt-get install git -y
+# git --version
 ```
 
-### Part 4.3 - Installing and Configuring SSH (Secure Shell Host)
+### Installing and Configuring SSH (Secure Shell Host)
 
-1. Type `sudo apt install openssh-server`
+1. Install openssh-server
 ```
 # sudo apt install openssh-server
 ```
-2. Type `sudo systemctl status ssh` to check SSH Server Status
+2. Check SSH Server Status
 ```
 # sudo systemctl status ssh
 ```
-3. Type `sudo vim /etc/ssh/sshd_config`
+3. Open sshd_config file with VIM
 ```
 # sudo vim /etc/ssh/sshd_config
 ```
@@ -340,17 +339,16 @@ Password:
 
 6. Save and Exit Vim
 
-7. Then type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings 
-are right
+7. Check if the port settings are right
 ```
 # sudo grep Port /etc/ssh/sshd_config
 ```
-8. Lastly type `sudo service ssh restart` to restart the SSH Service 
+8. Restart the SSH Service 
 ```
 # sudo service ssh restart
 ```
 
-### Part 4.4 - Installing and Configuring UFW (Uncomplicated Firewall)
+### Installing and Configuring UFW (Uncomplicated Firewall)
 
 1. Type `apt-get install ufw` to install UFW
 2. Type `sudo ufw enable` to inable UFW
@@ -360,7 +358,7 @@ are right
 6. Lastly Type `sudo ufw status numbered` to check the status of UFW 4242 Port
 
 
-## Part 5 Connecting to SSH
+## Connecting to SSH
 
 0. To exit your Virtual Machine and use your mouse, press `command` on your Apple Keyboard and your mouse should appear
 1. Go to your Virtual Box Program
@@ -377,9 +375,7 @@ are right
 10. Lastly type `exit` to quit your SSH iTerm Connection 
 
 
-## Part 6 - Continue Configurating Your Virtual Machine
-
-### Part 6.1 - Setting Password Policy
+### Setting Password Policy
 
 1. First type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Then type `sudo vim /etc/pam.d/common-password`
