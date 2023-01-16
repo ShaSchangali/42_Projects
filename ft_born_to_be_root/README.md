@@ -1,8 +1,16 @@
 ## Born2BeRoot Guide 
 
+## Questions & Answers
+- Part 1 - Difference between Debian and CentOS?
+- Part 2 -What is the difference between aptitude and APT (Advanced Packaging Tool)?
+- Part 3 -What is AppArmor?
+- Part 4 -Password Rules
+- Part 5 -What is LVM
+- Part 6 -UFW (Uncomplicated Firewall)
+- Part 7 -What is SSH?
+- Part 8 -What is Cron?
+
 ## Mandotary
-This guide has 8 Parts: 
-- Part 0 - Questions & Answers
 - Part 1 - Downloading Virtual Machine
 - Part 2 - Installing Virtual Machine
 - Part 3 - Starting Virtual Machine
@@ -13,23 +21,23 @@ This guide has 8 Parts:
 - Part 8 - Commands for UFW, Group, Host, lsblk and SSH
 
 ## Bonus
-This guide has 2 Parts:
-- Part 0 - Installation Lighttpd MariaDB PHP (LLMP) Stack
-- Part 1 - Installing Lighttpd
-- Part 2 - Installing & Configuring MariaDB
-- Part 3 - Installing PHP
-- Part 4 - Downloading & Configuring WordPress
-- Part 5 - Configuring Lighttpd
+- Part 1 - Installation Lighttpd MariaDB PHP (LLMP)
+- Part 2 - Installing Lighttpd
+- Part 3 - Installing & Configuring MariaDB
+- Part 4 - Installing PHP
+- Part 5 - Downloading & Configuring WordPress
+- Part 6 - Configuring Lighttpd
+
 - File Transfer Protocol (FTP)
 - Part 1 - Installing & Configuring FTP
 - Part 2 - Connecting to Server via FTP
 
-## Part 0 - Questions & Answers
+## Questions & Answers
 
 ### Difference between Debian and CentOS?
 Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software. 
 
-### What is a Virtual Machine?
+### Difference between Debian and CentOS?
 Is a resource that uses software instead of a physical computer to run programs or apps. Each VM has its own operating system and functions separately, so you can have more than one VM per machine. Can be used to test applications in a safe, separate environment. Works by using software to simulate virtual hardware and run on a host machine.
 
 ### What is the difference between aptitude and APT (Advanced Packaging Tool)?
@@ -62,34 +70,24 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
 
 
-## Part 1 - Downloading Virtual Machine
+## Downloading Virtual Machine
+<img width="264" alt="Screen Shot 2022-06-24 at 12 18 12 PM" src="https://user-images.githubusercontent.com/58959408/175452234-79c7f008-10b2-4e4b-a602-95886d9e2508.png">
 
-1. Click on this link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
+1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 
-### Part 1.1 - Virtual Box
+## Installing The Virtual Machine
 
-#### Now head over to Virtual Box to continue on.
-<img width="264" alt="Screen Shot 2022-06-24 at 12 18 12 PM" src="https://user-images.githubusercontent.com/58959408/175452234-79c7f008-10b2-4e4b-a602-95886d9e2508.png">
-
-#### Don't have Virtual Box Installed?
-Download it from Managed Software Center on an Apple Computer/Laptop.
-
-<img width="1307" alt="Screen Shot 2022-06-24 at 12 27 24 PM" src="https://user-images.githubusercontent.com/58959408/175453219-e30d058a-946c-482b-85de-4feaad7b970d.png">
-
-
-## Part 2 - Installing Your Virtual Machine
-
-1. Click on `New`
+1. Click `New`
 
 ![1*tkjZEbnHKqPGN24HQw_kRA](https://user-images.githubusercontent.com/58959408/174700376-2862e8e9-0a7a-4681-af3b-e82dbc7d9aa5.png)
 
-2. Change Machine Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and then click `continue` to move to the next step.
+2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
 
 ![1*WyFDl98AZfft999XCKD6kA](https://user-images.githubusercontent.com/58959408/174700651-8dc8e0a9-7709-4202-8a12-12a384ff6e3e.png)
 
-3. Set Memory Size as `1024 MB` and click continue.
+3. Set Memory Size to `1024 MB` and continue.
 
 ![1*SoVNIKT340ARlLvQ7RuwDA](https://user-images.githubusercontent.com/58959408/174701125-7a285b0d-7036-4bef-926b-271b0032d7ad.png)
 
@@ -101,15 +99,15 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ![1*6_D9jIyOW0jE3a6vF_UzXg](https://user-images.githubusercontent.com/58959408/174701340-d84f6c80-e09b-43ae-b31a-6dd5d6306f23.png)
 
-6. Click `Dyamically Allocated` and then click `Continue` to only use space on your Hard Disk.
+6. Click `Dyamically Allocated` and then click `Continue` to only use space on the Hard Disk.
 
 ![1*HagpR-UD0HWCb7zRTeSQXQ](https://user-images.githubusercontent.com/58959408/174744677-eac5b679-49f7-4881-a59b-00a420cbe640.png)
 
-7. Set Size as `12.00 GB` and then click `Continue` this should be enough for this project.
+7. Set Size as `12.00 GB` and then click `Continue`.
 
 ![1*rYdYJbPswCVCUa5pwKcRZA](https://user-images.githubusercontent.com/58959408/174745855-73880988-be69-45cc-bb6d-7c6c1a40c1ac.png)
 
-8. Click `Settings` and then click `Storage` to view your Virtual Machine Storage.
+8. Click `Settings` and then click `Storage` to view the Virtual Machine Storage.
 	
 <img width="1309" alt="Screen Shot 2022-06-24 at 12 51 09 PM" src="https://user-images.githubusercontent.com/58959408/175455682-e1b4c977-2f33-41cf-b3cc-3ad78b3254ce.png">
 
@@ -121,11 +119,11 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 	
 ![1*VDy31g0tePnUOuJ1cZQsxQ](https://user-images.githubusercontent.com/58959408/174702002-9b4fe4d2-3008-4375-9ec1-57f5e1425eb8.png)
 
-11. Then click on the Virtual Machine file (.iso). 
+11. Click on the Virtual Machine file (.iso). 
 	
 ![1*FOldzHFaQ2JS_phe6z6T4g](https://user-images.githubusercontent.com/58959408/174702161-957eb0b6-2803-407f-b018-c02f7615f027.png)
 
-12. Click on your `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
+12. Click on created `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
 	
 ![1*Evj7Z2EOq102A1zUVgUnQg](https://user-images.githubusercontent.com/58959408/174702820-824e0acf-f919-4bfb-a619-eea8068fe309.png)
 
@@ -134,7 +132,7 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 ![1*Yg53c1-01g4VzTqhcVEEcA](https://user-images.githubusercontent.com/58959408/174702806-1bd8fce3-aac6-44b3-84d9-c76252dfecd8.png)
 
 
-## Part 3 - Accessing Your Virtual Machine
+## Part 3 - Accessing The Virtual Machine
 
 #### In the Virtual Machine, you will not have access to your mouse and will only use your Keyboard to operate your Virtual Machine. 
 
@@ -158,9 +156,9 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 
 ![1*zKUk6R9tls_jiyY81ue8kA](https://user-images.githubusercontent.com/58959408/174729629-4f111978-4fc1-47ae-891f-aea693929480.png)
 
-## ⚠️ NOTE: Whenever you are told to create a password, use the same password as everything.
+## ⚠️ NOTE: Whenever you create a password, use the same password as everything.
 
-5. Create a Host Name as your login, with 42 at the end (eg. prossi42) - write down your Host Name, as you will need this later on.
+5. Create a Host Name as your login, with 42 at the end (eg. User42) - write down your Host Name, as you will need this later on.
 	
 ![1*r0fzgkzXOjK2DfsBCh7wEQ](https://user-images.githubusercontent.com/58959408/174729750-fbd2d215-b526-42c6-8ff0-b83f886c1f3c.png)
 
@@ -168,15 +166,15 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 	
 ![1*81XjZBZg2bbNXunuxgnFPQ](https://user-images.githubusercontent.com/58959408/174729840-a85c3319-3a70-4922-9335-e4bb6f765ee9.png)
 
-7. Create a Password for the Host Name - write this down as well, as you will need this later on. 
+7. Create a Password for the Host Name  
 	
 ![1*ft498oj7syh4zVjI48U_tw](https://user-images.githubusercontent.com/58959408/174729894-d0fc794f-add8-49e7-9015-521f9e93958f.png)
 
-8. Create a User Name without 42 at the end (eg. prossi) - write down your Host Name, as you will need this later on. 
+8. Create a User Name without 42 at the end (eg. testUser) 
 	
 ![1*rhJWnMKN0TPBZwqRey9OeQ](https://user-images.githubusercontent.com/58959408/174729939-06933a35-5dd1-4924-848e-78d2023bb66e.png)
 
-9. Create a Password for the User Name (you might as well use the same password as your Host Password) write this down as well, as you will need this later on. 
+9. Create a Password for the User Name
 
 10. Press `enter` on your `Timezone` (The timezone your currently doing this project in).
 	
@@ -198,15 +196,15 @@ Download it from Managed Software Center on an Apple Computer/Laptop.
 	
 ![1*NHdo3JbApICz0Co2epPLFA](https://user-images.githubusercontent.com/58959408/174730521-780f5eb2-4955-48df-8c59-af9914674ee7.png)
 
-15. Press `Enter` to `cancel` Erasing data as you won't need this for your Virtual Machine.
+15. Press `Enter` to `cancel` Erasing data.
 	
 ![1*KHmnCUJUWhf1minIdHNS4g](https://user-images.githubusercontent.com/58959408/174730626-c132041c-3070-405f-a8d8-60d620a1d770.png)
 
-16. Create a Encryption passphrase - write this down as well, as you will need this later on.
+16. Create a Encryption passphrase
 	
 ![1*B0QL-gX7rZW5-RJyTD1uWw](https://user-images.githubusercontent.com/58959408/174730733-f306e051-4b0e-40de-93ab-56f2cdce45d5.png)
 
-17. Retype the Encryption passphrase you just created.
+17. Retype the Encryption passphrase that just created.
 	
 ![1*xE1owXa0ttpvcioaEwnutA](https://user-images.githubusercontent.com/58959408/174730804-796f6db1-8b59-4f8e-900c-1416f957db30.png)
 
