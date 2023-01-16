@@ -223,7 +223,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 1. Login in as the root user.
 ```
 $ su -
-$
 ```
 2. Update the system
 ```
@@ -233,11 +232,11 @@ $ apt-get update -y
 ```
 $ apt-get upgrade -y
 ```
-4. Install Sudo 
+4. Install sudo  
 ```
 $ apt install sudo
 ```
-5. Verify if sudo was successfully installed
+5. Check sudo was successfully installed
 ```
 $ dpkg -l | grep sudo
 ```
