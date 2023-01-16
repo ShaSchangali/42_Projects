@@ -1,32 +1,32 @@
-## Born2BeRoot Guide 
+## Born2BeRoot
 
 ## Questions & Answers
-- Part 1 - Difference between Debian and CentOS?
-- Part 2 -What is the difference between aptitude and APT (Advanced Packaging Tool)?
-- Part 3 -What is AppArmor?
-- Part 4 -Password Rules
-- Part 5 -What is LVM
-- Part 6 -UFW (Uncomplicated Firewall)
-- Part 7 -What is SSH?
-- Part 8 -What is Cron?
+- Difference between Debian and CentOS?
+- What is the difference between aptitude and APT (Advanced Packaging Tool)?
+- What is AppArmor?
+- Password Rules
+- What is LVM?
+- Part 6 - UFW (Uncomplicated Firewall)
+- Part 7 - What is SSH?
+- Part 8 - What is Cron?
 
 ## Mandotary
-- Part 1 - Downloading Virtual Machine
-- Part 2 - Installing Virtual Machine
-- Part 3 - Starting Virtual Machine
-- Part 4 - Configurating Virtual Machine
-- Part 5 - Connecting to SSH
-- Part 6 - Continue Configurating Your Virtual Machine
-- Part 7 - Signature.txt
-- Part 8 - Commands for UFW, Group, Host, lsblk and SSH
+- Downloading Virtual Machine
+- Installing Virtual Machine
+- Starting Virtual Machine
+- Configurating Virtual Machine
+- Connecting to SSH
+- Configurating Virtual Machine
+- Signature.txt
+- Overview Commands (UFW, Group, Host, lsblk and SSH)
 
 ## Bonus
-- Part 1 - Installation Lighttpd MariaDB PHP (LLMP)
-- Part 2 - Installing Lighttpd
-- Part 3 - Installing & Configuring MariaDB
-- Part 4 - Installing PHP
-- Part 5 - Downloading & Configuring WordPress
-- Part 6 - Configuring Lighttpd
+#### Installation Lighttpd MariaDB PHP (LLMP)
+- Part 1 - Installing Lighttpd
+- Part 2 - Installing & Configuring MariaDB
+- Part 3 - Installing PHP
+- Part 4 - Downloading & Configuring WordPress
+- Part 5 - Configuring Lighttpd
 
 #### File Transfer Protocol (FTP)
 - Part 1 - Installing & Configuring FTP
@@ -302,11 +302,10 @@ Password:
 ```
 # sudo visudo
 ```
-9. Find in sudoers file - # User privilege specification and type 
+9. Find in sudoers file - # User privilege specification
 ```
 # your_username ALL=(ALL)
 ```
-
 
 ### Installing Git and Vim
 
