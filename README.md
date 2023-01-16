@@ -24,10 +24,6 @@
 	free for whoever is approved in its selection process* - the so-called "Piscine" - becoming
 	thus "cadets" (42's students).
 
-\* For further information about 42's **selection process** (the "Piscine"), please visit the [C Piscine repo](https://github.com/appinha/42sp-piscine).
-
-[![Photo of a 42saopaulo's lab](42saopaulo.jpg)](https://www.42sp.org.br/)
-
 ## 🛠️ Skills developed at 42cursus
 
 ### Hard-skills
@@ -41,8 +37,6 @@
 	* Web (HTML, CSS, Wordpress)
 	* Computer graphics
 	* Assembly language
-
--- among others (find below the complete [curriculum](#-42s-galaxy-curriculum)).
 
 ### Soft-skills
 
