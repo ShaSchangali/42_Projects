@@ -124,9 +124,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 4. Press `enter` on `American English` or your keyboard of preference.
 
-#### ⚠️ NOTE: create & use the same password for everything.
-
-5. Create a Host Name as your login, with 42 at the end (eg. User42) 
+5. Create a Host Name as your login, with 42 at the end (eg. intraName42) 
 
 6. Leave Domain name blank, press `enter` on Continue.
 	
@@ -136,7 +134,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 ![1*ft498oj7syh4zVjI48U_tw](https://user-images.githubusercontent.com/58959408/174729894-d0fc794f-add8-49e7-9015-521f9e93958f.png)
 
-8. Create a User Name without 42 at the end (eg. testUser) 
+8. Create a User Name without 42 at the end (eg. test_user)
 	
 ![1*rhJWnMKN0TPBZwqRey9OeQ](https://user-images.githubusercontent.com/58959408/174729939-06933a35-5dd1-4924-848e-78d2023bb66e.png)
 
@@ -144,7 +142,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 10. Press `enter` on your `Timezone`
 
-11. Press `enter` on `Guided - use entire disk and set up encrypted LVM` (Second to last option from the list).
+11. Press `enter` on `Guided - use entire disk and set up encrypted LVM`
 	
 ![1*CsSx-ALmn8mMxvWicsNVAQ](https://user-images.githubusercontent.com/58959408/174730389-03e5dcd7-9472-4cab-bf88-fe3cc4dc0f4c.png)
 
@@ -152,8 +150,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 	
 ![1*BTLz5sT6noL_SVQ7eq3u-A](https://user-images.githubusercontent.com/58959408/174730452-e267df43-2883-4760-85c4-010970fee329.png)
 
-13. Press `enter` on Select `Separate /home, /var, and /tmp paritions` (Last option from the list).
-	
+13. Press `enter` on Select `Separate /home, /var, and /tmp paritions` 
+
 ![1*r5zFPA7R_9BtIqwyOpCCVw](https://user-images.githubusercontent.com/58959408/174730481-2641b9c0-c50d-4f2b-9e71-3896a0760e10.png)
 
 14. Select `Yes` and press `Enter` to write the changes to disks and configure LVM.
@@ -185,8 +183,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ![1*Mfb1YHt4K3pZJ12TF2dXAw](https://user-images.githubusercontent.com/58959408/174730933-615891f8-d9fa-4312-ad78-d691bd648773.png)
 
 22. Press `enter` in the country that your in.
-	
-![1*vqV-bN3zDMqTBAKz_u548w](https://user-images.githubusercontent.com/58959408/174731009-ca532fcf-ac41-4cde-bdae-2cf18c8bf519.png)
 
 23. Press `enter` on deb.debian.org.
 	
