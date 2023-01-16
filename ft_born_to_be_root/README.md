@@ -213,7 +213,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ![1*riuXLYYgESxdq-lpkivFXQ](https://user-images.githubusercontent.com/58959408/174731601-b5949892-28b5-4b5a-94dd-9b50e6f0662b.png)
 
 
-## Starting Your Virtual Machine
+## Starting The Virtual Machine
 
 1. Press enter on `Debian GNU/Linux` 
 
@@ -232,65 +232,65 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ```
 $ su -
 Password:
-#
+$
 ```
 2. Update the system
 ```
-# apt-get update -y
+$ apt-get update -y
 ```
 3. Upgrade the system
 ```
-# apt-get upgrade -y
+$ apt-get upgrade -y
 ```
 4. Install Sudo 
 ```
-# apt install sudo
+$ apt install sudo
 ```
 5. Verify if sudo was successfully installed
 ```
-# dpkg -l | grep sudo.
+$ dpkg -l | grep sudo
 ```
 6. Add user in the sudo group 
 ```
-# usermod -aG sudo your_username
+$ usermod -aG sudo your_username
 ```
 7. Check if user is in sudo group)
 ```
-# getent group sudo
+$ getent group sudo
 ```
 8. Open sudoers file
 ```
-# sudo visudo
+$ sudo visudo
 ```
 9. Find in sudoers file - # User privilege specification
 ```
-# your_username ALL=(ALL)
+$ your_username ALL=(ALL)
 ```
 
 ### Installing Git and Vim
 
 1. install Git
 ```
-# apt-get install git -y
+$ apt-get install git -y
 ```
 2. Check Git Version
 ```
-# git --version
+$ git --version
 ```
 
 ### Installing and Configuring SSH (Secure Shell Host)
 
 1. Install openssh-server
 ```
-# sudo apt install openssh-server
+$ sudo apt install openssh-server
 ```
 2. Check SSH Server Status
 ```
-# sudo systemctl status ssh
+$ sudo systemctl status ssh
 ```
 3. Open sshd_config file with VIM
 ```
-# sudo vim /etc/ssh/sshd_config
+$ sudo vim /etc/ssh/sshd_config
 ```
 4. Find this line `#Port22` 
 
@@ -300,11 +300,11 @@ Password:
 
 7. Check if the port settings are right
 ```
-# sudo grep Port /etc/ssh/sshd_config
+$ sudo grep Port /etc/ssh/sshd_config
 ```
 8. Restart the SSH Service 
 ```
-# sudo service ssh restart
+$ sudo service ssh restart
 ```
 
 ### Installing and Configuring UFW (Uncomplicated Firewall)
