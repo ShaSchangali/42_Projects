@@ -234,7 +234,7 @@ $ apt-get upgrade -y
 ```
 #### 4. Install sudo  
 ```
-#### $ apt install sudo
+$ apt install sudo
 ```
 #### 5. Check sudo was successfully installed
 ```
