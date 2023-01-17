@@ -399,8 +399,7 @@ MariaDB [(none)]> SHOW DATABASES;
 9. Type `sudo cp -r /var/www/html/wordpress/* /var/www/html` to copy content of `/var/www/html/wordpress` to `/var/www/html`
 10. Type `/var/www/html/wordpress` to remove `/var/www/html/wordpress`
 11. Type `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php` to create WordPress configuration file
-12. Type `sudo vi /var/www/html/wp-config.php` to Configure WordPress to reference previously-created MariaDB database & user
-Configure WordPress to reference previously-created MariaDB database & user via `sudo vi /var/www/html/wp-config.php`.
+12. Type `sudo vi /var/www/html/wp-config.php` to configure WordPress to reference previously-created MariaDB 
 13. Replace the below
 ```
 23 define( 'DB_NAME', 'database_name_here' );^M
