@@ -32,7 +32,7 @@
 - Installing & Configuring FTP
 - Connecting to Server via FTP
 
-
+## 
 ## Questions & Answers
 
 ### Difference between Debian and CentOS?
@@ -74,108 +74,62 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ## Downloading Virtual Machine
 
 1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
-
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 
 ## Installing The Virtual Machine
 
 1. Click `New`
-
 2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
-
 3. Set Memory Size to `1024 MB` and continue.
-
 4. Click `Create a Virtual Hard Disk Now` and then click `Create` to create the Hard Disk.
-
 5. Click `VDI (VirtualBox Disk Image)` and then click `Continue` to select VDI.
-
 6. Click `Dyamically Allocated` and then click `Continue` to only use space on the Hard Disk.
-
 7. Set Size as `12.00 GB` and then click `Continue`.
-
 8. Click `Settings` and then click `Storage` to view the Virtual Machine Storage.
-
 9. Click on `Optical Drive` (Optical Drive - far right blue small box).
-
 10. Click on `Choose a disk file...` (2nd option in the drop down).
-	
 11. Click on the Virtual Machine file (.iso). 
-	
 12. Click on created `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
-
 13. Click `Start` (The Green Arrow ➡️) to start Virtual Machine.
 
 ## Accessing The Virtual Machine
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
 
 1. Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
-
 2. Press `enter` on `English - English` or your language of preference.
-
 3. Press `enter` on `Australia` or the country your installing this Virtual Machine.
-
 4. Press `enter` on `American English` or your keyboard of preference.
-
 5. Create a Host Name as your login, with 42 at the end (eg. intraName42) 
-
 6. Leave Domain name blank, press `enter` on Continue.
-
 7. Create a Password for the Host Name
-
 8. Create a User Name without 42 at the end (eg. test_user)
-
 9. Create a Password for the User Name
-
-10. Press `enter` on your `Timezone`
-
+10. Prss `enter` on your `Timezone`
 11. Press `enter` on `Guided - use entire disk and set up encrypted LVM`
-
 12. Press `enter` on Select Disk to Partition.
-
 13. Press `enter` on Select `Separate /home, /var, and /tmp paritions` 
-
 14. Select `Yes` and press `Enter` to write the changes to disks and configure LVM.
-	
 15. Press `Enter` to `cancel` Erasing data.
-	
 16. Create a Encryption passphrase
-	
 17. Retype the Encryption passphrase that just created.
-	
 18. Type in `max`and press enter on `Continue` to assign the amount of volume group for partitioning.
-	
 19. Press enter on `Finish partitioning and write changes to disk`. 
-
 20. Press enter on `Yes` for Partition Disks.
-
 21. Press enter on `No` for Configure the package manager.
-	
 22. Press `enter` in the country that your in.
-
 23. Press `enter` on deb.debian.org.
-	
 24. Leave this blank and press `enter` on continue.
-	
 25. Press `enter` on `no` for Configuring popularity-contest.
-	
 26. Deselect `SSH server` and `standard system utilities` by pressing the `Space key` and  press `enter`
-	
 27. Press `enter` on `Yes` to Install the GRUB boot loader on a hard disk.
-	
 28. Press `enter` on /dev/sda
-	
 29. Press `enter` on `continue` to finish the installation.
-	
 ## Starting The Virtual Machine
 
 1. Press enter on `Debian GNU/Linux` 
-
 2. Enter your encryption password you had created before
-
 3. Login in as the your_username you had created before
-
 4. Type `lsblk` in your Virtual Machine to see the partition
-
 
 ## Configurating The Virtual Machine
 
@@ -207,7 +161,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 8. Type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
 7. Type ` sudo service ssh restart` to restart the SSH service
 
-
 ### Installing and Configuring UFW (Uncomplicated Firewall)
 
 1. Type `apt-get install ufw` to install UFW
@@ -217,31 +170,29 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 5. Type `sudo ufw allow 4242` to configure the Port Rules
 6. Type `sudo ufw status numbered` to check the status of UFW 4242 Port
 
-
 ## Connecting to SSH
-
-0. To exit your Virtual Machine and use your mouse, press `command` on your Apple Keyboard and your mouse should appear
-1. Go to your Virtual Box Program
-2. Click on your Virtual Machine and select `Settings`
+#### ⚠️ NOTE: To exit Virtual Machine and use the mouse, press `command` on your Apple Keyboard
+1. Open Virtual Box
+2. Click on the Virtual Machine and select `Settings`
 3. Click `Network` then `Adapter 1` then `Advanced` and then click on `Port Forwarding`
 4. Change the Host Port and Guest Port to `4242`
-5. Then head back to your Virtual Machine
-6. Type `sudo systemctl restart ssh` to restart your SSH Server
-7. Type `sudo service sshd status` to check your SSH Status
-8. Open an iTerm and type the following `ssh your_username@127.0.0.1 -p 4242`
-9. In case an error occurs, then type `rm ~/.ssh/known_hosts` in your iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
-10. Lastly type `exit` to quit your SSH iTerm Connection 
+5. go back to the your Virtual Machine
+6. Type `sudo systemctl restart ssh` to restart the SSH Server
+7. Type `sudo service sshd status` to check the SSH Status
+8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
+9. In case an error occurs, then type `rm ~/.ssh/known_hosts` in iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
+10. Type`exit` to quit SSH with iTerm Connection
 
 
 ### Setting Password Policy
 
-1. First type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
-2. Then type `sudo vim /etc/pam.d/common-password`
-
+1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
+2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so` or
-4. Add this to the end of that line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-
-- 4.1 The line should now look like this - `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+4. Add this to the end of that line 
+- `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+- The line should now look like this
+`password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 
 5. Save and Exit Vim
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
