@@ -435,7 +435,7 @@ $ sudo service lighttpd force-reload
 ```
 31 #write_enable=YES
 ```
-To set root folder for FTP-connected user to `/home/<username>/ftp`, add below lines:
+#### To set root folder for FTP-connected user to `/home/<username>/ftp`, add below lines:
 ```
 $ sudo mkdir /home/<username>/ftp
 $ sudo mkdir /home/<username>/ftp/files
@@ -447,8 +447,7 @@ local_root=/home/$USER/ftp
 <~~~>
 ```
 
-
-To prevent user from accessing files or using commands outside the directory tree, uncomment below line:
+#### To prevent user from accessing files or using commands outside the directory tree, uncomment below line:
 ```
 114 #chroot_local_user=YES
 ```
@@ -462,10 +461,8 @@ userlist_file=/etc/vsftpd.userlist
 userlist_deny=NO
 <~~~>
 ```
-
-#### Step 2: Connecting to Server via FTP
-FTP into your virtual machine via `ftp <ip-address>`.
-```
-$ ftp <ip-address>
-```
-Terminate FTP session at any time via `CTRL + D`.
+##
+##
+## Connecting to Server via FTP
+1. Type `ftp <ip-address>` to accsess FTP 
+2. Press `CTRL + D` to terminate FTP session at any time
