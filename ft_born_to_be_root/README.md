@@ -394,15 +394,14 @@ MariaDB [(none)]> SHOW DATABASES;
 #### Downloading & Configuring WordPress
 5. Type `sudo apt install wget` to Install wget
 6. Type `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html` to download WordPress
-7. Type `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html` to download WordPress
-8. Type `sudo tar -xzvf /var/www/html/latest.tar.gz` to extract downloaded content
-9. Type `sudo rm /var/www/html/latest.tar.gz` to remove tarball
-10. Type `sudo cp -r /var/www/html/wordpress/* /var/www/html` to copy content of `/var/www/html/wordpress` to `/var/www/html`
-11. Type `/var/www/html/wordpress` to remove `/var/www/html/wordpress`
-12. Type `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php` to create WordPress configuration file
-13. Type `sudo vi /var/www/html/wp-config.php` to Configure WordPress to reference previously-created MariaDB database & user
+7. Type `sudo tar -xzvf /var/www/html/latest.tar.gz` to extract downloaded content
+8. Type `sudo rm /var/www/html/latest.tar.gz` to remove tarball
+9. Type `sudo cp -r /var/www/html/wordpress/* /var/www/html` to copy content of `/var/www/html/wordpress` to `/var/www/html`
+10. Type `/var/www/html/wordpress` to remove `/var/www/html/wordpress`
+11. Type `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php` to create WordPress configuration file
+12. Type `sudo vi /var/www/html/wp-config.php` to Configure WordPress to reference previously-created MariaDB database & user
 Configure WordPress to reference previously-created MariaDB database & user via `sudo vi /var/www/html/wp-config.php`.
-14. Replace the below
+13. Replace the below
 ```
 23 define( 'DB_NAME', 'database_name_here' );^M
 26 define( 'DB_USER', 'username_here' );^M
@@ -415,7 +414,7 @@ with:
 29 define( 'DB_PASSWORD', '<password-2>' );^M
 ```
 
-#### Step 5: Configuring Lighttpd
+#### Configuring Lighttpd
 Enable below modules via `sudo lighty-enable-mod fastcgi; sudo lighty-enable-mod fastcgi-php; sudo service lighttpd force-reload`.
 ```
 $ sudo lighty-enable-mod fastcgi
