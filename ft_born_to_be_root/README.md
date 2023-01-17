@@ -1,4 +1,5 @@
-## Born2BeRoot - Guide
+# Born2BeRoot - Guide
+This project aims to introduce you to the wonderful world of virtualization. Creating a machine in VirtualBox under specific instructions and set up a Linux operating system while implementing strict rules in Shell.
 
 ## Questions & Answers
 - Difference between Debian and CentOS?
@@ -233,7 +234,7 @@ password requisite pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 rejec
 ```
 PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7
 ```
-8. Replace line
+8. Replace line below
 ```
 PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
 ```
@@ -329,7 +330,7 @@ wall "	#Architecture: $arc
 5. Save and Exit the `monitoring.sh` script
 6. Type `exit` to exit the iTerm SSH Login.
 7. Type `sudo visudo` to open the sudoers file
-8. Add the line below
+8. Add the line below at the end of the file
 ```
 your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
 ```
