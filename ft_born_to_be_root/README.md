@@ -332,9 +332,9 @@ wall "	#Architecture: $arc
 6. Type `exit` to exit the iTerm SSH Login.
 7. Type `sudo visudo` to open the sudoers file
 8. Add the line below
-   ```
-  your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
-   ```
+```
+    your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
+```
 ![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
 
 9. `Exit` and `Save` the sudoers file
@@ -343,8 +343,7 @@ wall "	#Architecture: $arc
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
 13. Add following rule 
 ```
-// Every 10 mins, this script will show
-*/10 * * * * /usr/local/bin/monitoring.sh
+	*/10 * * * * /usr/local/bin/monitoring.sh
 ```
 ##
 ##
