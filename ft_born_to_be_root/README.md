@@ -11,6 +11,7 @@
 - What is SSH?
 - What is Cron?
 
+##
 ## Mandotary
 - Downloading Virtual Machine
 - Installing Virtual Machine
@@ -21,13 +22,14 @@
 - Signature.txt
 - Overview Commands (UFW, Group, Host, lsblk and SSH)
 
+##
 ## Bonus
 - Installing Lighttpd
 - Installing & Configuring MariaDB
 - Installing PHP
 - Downloading & Configuring WordPress
 - Configuring Lighttpd
-
+##
 #### File Transfer Protocol (FTP)
 - Installing & Configuring FTP
 - Connecting to Server via FTP
@@ -36,48 +38,55 @@
 ## Questions & Answers
 
 ### Difference between Debian and CentOS?
-Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software. 
+##
+Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software.
 
+##
 ### What is a Virtual Machine?
 Is a resource that uses software instead of a physical computer to run programs or apps. Each VM has its own operating system and functions separately, so you can have more than one VM per machine. Can be used to test applications in a safe, separate environment. Works by using software to simulate virtual hardware and run on a host machine.
 
+##
 ### What is the difference between aptitude and APT (Advanced Packaging Tool)?
 * Aptitude is a high-level package manager while APT is lower level which can be used by other higher level package managers
 * Aptitude is smarter and will automatically remove unused packages or suggest installation of dependent packages
 * Apt will only do explicitly what it is told to do in the command line
 
+##
 ### What is AppArmor?
 Linux security system that provides Mandatory Access Control (MAC) security. Allows the system admin to restrict the actions that processes can perform. It is included by default with Debian. Run aa-status to check if it is running.
 
+##
 ### Password Rules
 We using the password quality checking library and there are two files the common-password file which sets the rules like upper and lower case characters, duplicate characters etc and the login.defs file which stores the password expiration rules (30 days etc).
 * Sudo nano /etc/login.defs
 * Sudo nano /etc/pam.d/common-password
 
+##
 ### What is LVM
-Logical Volume Manager – allows us to easily manipulate the partitions or logical volume on a storage device. 
+Logical Volume Manager – allows us to easily manipulate the partitions or logical volume on a storage device.
 
+##
 ### UFW (Uncomplicated Firewall) 
 UFW is a interface to modify the firewall of the device without compromising security. You use it to configure which ports to allow connections to and which ports to close. This is useful in conjunction with SSH, can set a specific port for it to work with.
 
+##
 ### What is SSH?
 SSH or Secure Shell is an authentication mechanism between a client and a host. It uses encryption techniques so that all communication between clients and hosts is done in encrypted form. User on Mac or Linux can use SSH the terminal to work on their server via SSH.
-
+##
 ### What is Cron?
 Cron or cron job is a command line utility to schedule commands or scripts to happen at specific intervals or a specific time each day. Useful if you want to set your server to restart at a specific time each day. 
-
+##
 - `cd /usr/local/bin` – to show monitoring.sh
 - `sudo crontab -u root -e` – to edit the cron job
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
 
-
+##
 ## Downloading Virtual Machine
-
 1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 
+##
 ## Installing The Virtual Machine
-
 1. Click `New`
 2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
 3. Set Memory Size to `1024 MB` and continue.
@@ -92,9 +101,9 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 12. Click on created `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
 13. Click `Start` (The Green Arrow ➡️) to start Virtual Machine.
 
+##
 ## Accessing The Virtual Machine
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
-
 1. Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
 2. Press `enter` on `English - English` or your language of preference.
 3. Press `enter` on `Australia` or the country your installing this Virtual Machine.
@@ -125,15 +134,15 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 28. Press `enter` on /dev/sda
 29. Press `enter` on `continue` to finish the installation.
 
+##
 ## Starting The Virtual Machine
-
 1. Press enter on `Debian GNU/Linux` 
 2. Enter your `encryption password` that created before
 3. Login in as the `your_username` you that created before
-4. Type `lsblk` in the Virtual Machine to see the partition
+4. Type `lsblk` to see the partitions
 
+##
 ## Configurating The Virtual Machine
-
 1. Type `$ su -` to Login in as the root user.
 2. Type `apt-get update -y` to update the system
 3. Type `apt-get upgrade -y` to upgrade the system
@@ -145,25 +154,25 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 9. Find in sudoers file - #User privilege specification and Add
 10. Add `your_username ALL=(ALL)` to sudoers file
 
+##
 ## Installing Git and Vim
-
 1. Type `$ apt-get install git -y` to install Git
 2. Type `git --version` Check Git Version
 
+##
 ## Installing and Configuring SSH (Secure Shell Host)
-
 1. Type `$ sudo apt install openssh-server` to install openssh-server
 2. Type `$ sudo systemctl status ssh` to check SSH server status
 3. Type `$ sudo vim /etc/ssh/sshd_config` to open sshd_config file with VIM
-4. Find this line `#Port22` in sshd_config file
+4. Find line `#Port22` in sshd_config file
 5. Change line to `Port 4242` without the # (Hash)
 6. Type `$ apt-get install git -y` to install Git
 7. Save and `exit` Vim with `:q`
 8. Type `sudo grep Port /etc/ssh/sshd_config` to check port settings
 7. Type ` sudo service ssh restart` to restart the SSH service
 
+##
 ### Installing and Configuring UFW (Uncomplicated Firewall)
-
 1. Type `apt-get install ufw` to install UFW
 2. Type `sudo ufw enable` to inable UFW
 3. Type `sudo ufw status numbered` to check the status of UFW
@@ -171,6 +180,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 5. Type `sudo ufw allow 4242` to configure the Port Rules
 6. Type `sudo ufw status numbered` to check the status of UFW
 
+##
 ## Connecting to SSH
 #### ⚠️ NOTE: To exit Virtual Machine and use the mouse, press `command` on your Apple Keyboard
 1. Open Virtual Box
@@ -185,16 +195,15 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
  - Type `rm ~/.ssh/known_hosts` in iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
 10. Type`exit` to quit SSH with iTerm Connection
 
-
+##
 ### Setting Password Policy
-
 1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Type`sudo vim /etc/pam.d/common-password`
-3. Find this line. `password		requisite		pam_deny.so` or
+3. Find this line. `password		requisite		pam_deny.so`
 4. Add this to the end of that line 
 - `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-- The line should now look like this
-`password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+5. The line should now look like this
+- `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 
 5. Save and Exit Vim
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
@@ -202,14 +211,14 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
 9. Lastly type `sudo reboot` to reboot the change affects
 
+##
 ### Creating a Group
-
 1. First type `sudo groupadd user42` to create a group
 2. Then type `sudo groupadd evaluating` to create an evaluating group
 3. Lastly type `getent group` to check if the group has been created
 
+##
 ### Creating a User and Assigning Them Into The Group
-
 1. First type `cut -d: -f1 /etc/passwd` to check all local users
 2. Type `sudo adduser new_username` to create a username - write down your new_username, as you will need this later on. 
 - 2.1 Type `sudo usermod -aG user42 your_username`
@@ -219,19 +228,18 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 5. Type `groups` to see which groups the user account belongs to
 6. Lastly type `chage -l your_new_username` to check if the password rules are working in users
 
-### Part 6.4 - Creating sudo.log
+##
+### Creating sudo.log
+1. Type`cd ~/../`
+4. Type `cd var/log`
+5. Type `mkdir sudo` (if it already exists, then continue to the next step).
+6. Type `cd sudo && touch sudo.log`
+7. Type `cd ~/../`
 
-1. First type `cd ~/../`
-4. Then type `cd var/log`
-5. Then type `mkdir sudo` (if it already exists, then continue to the next step).
-6. Then type `cd sudo && touch sudo.log`
-7. Then type `cd ~/../`
-
-### Part 6.4.1 - Configuring Sudoers Group
-
-1. First type `sudo nano /etc/sudoers` to go the sudoers file
-2. Now edit your sudoers file to look like the following by adding in all of the defaults in the image below - ![1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
-
+##
+### Configuring Sudoers Group
+1. Type `sudo nano /etc/sudoers` to open the sudoers file
+2. Edit sudoers fileto the the following by adding in all of the defaults
 ```
 Defaults	env_reset
 Defaults	mail_badpass
@@ -242,17 +250,19 @@ Defaults	logfile="/var/log/sudo.log"
 Defaults	log_input, log_output
 Defaults	requiretty
 ```
+[1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
 
-### Part 6.5 - Crontab Configuation
+##
+### Crontab Configuation
+1. Type `apt-get install -y net-tools` to install the netstat tools
+2. Type `cd /usr/local/bin/`
+3. Type `touch monitoring.sh`
+4. Type `chmod 777 monitoring.sh`
 
-1. Then type `apt-get install -y net-tools` to install the netstat tools
-2. Then type `cd /usr/local/bin/`
-3. Then type `touch monitoring.sh`
-4. Lastly type `chmod 777 monitoring.sh`
-
-### Part 6.5.1 - Copy Text Below onto Virtual Machine 
-
-1. Copy this text (To copy the text below, hover with your mouse to the right corner of the text below and a copy icon will appear). 
+##
+### Copy script into monitorig.sh
+#### ⚠️ NOTE: To copy the text below, hover with the mouse to the right corner of the text below and a copy icon will appear
+1. Copy text below
 ```
 #!/bin/bash
 arc=$(uname -a)
@@ -285,36 +295,34 @@ wall "	#Architecture: $arc
 	#Network: IP $ip ($mac)
 	#Sudo: $cmds cmd"
 ```
-2. Then open up a iTerm2 seperate from your Virtual Machine and type in iTerm `ssh your_host_name42@127.0.0.1 -p 4242` and then type your password, when it asks for it. 
-3. Then type `cd /usr/local/bin`.
-4. Then type `nano monitoring.sh` and paste the text above into the vim monitoring.sh you just created, by doing `command` + `v` on your Apple keyboard.
-5. Save and Exit your `monitoring.sh`
-- 5.1 - Then type `exit` to exit the iTerm SSH Login.
-- 5.2 - Then go back to your Virtual Machine (not iTerm) and continue on with the steps below. 
-6. Then type `sudo visudo` to open your sudoers file 
-7. Add in this line `your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh` under where its written %sudo ALL=(ALL:ALL) ALL
-8. It should look like this
-![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
-9. Then exit and save your sudoers file
-10. Now type `sudo reboot` in your Virtual Machine to reboot sudo
-11. Type `sudo /usr/local/bin/monitoring.sh` to execute your script as su (super user)
+2. Open `iTerm2` and Type `ssh your_host_name42@127.0.0.1 -p 4242` to login
+3. Type `cd /usr/local/bin`.
+4. Type `nano monitoring.sh` and paste the text into the vim monitoring.sh
+5. Save and Exit the `monitoring.sh` script
+- Type `exit` to exit the iTerm SSH Login.
+- Go back to the Virtual Machine and continue
+6. Type `sudo visudo` to open the sudoers file 
+7. Add this line `your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh`
+- ![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
+9. Then `exit` and `save` the sudoers file
+10. Type`sudo reboot` to reboot sudo
+11. Type `sudo /usr/local/bin/monitoring.sh` to execute  script as super user
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
-13. Lastly at the end of the crontab, type the following `*/10 * * * * /usr/local/bin/monitoring.sh` this means that every 10 mins, this script will show
+13. Add the following rulet  `*/10 * * * * /usr/local/bin/monitoring.sh` 
+- (this means that every 10 mins, this script will show)
 
 
-## Part 7 - Signature.txt (Last Part Before Defence)
+## Signature.txt 
 
 ⚠️ Warning: before you generate a signature number, turn off your Virtual Machine. ⚠️
 
 1. Open iTerm and type `cd`
-1. Then type `cd sgoinfre/students/<your_intra_username>/VirtualBox VMs`
+1. Type `cd sgoinfre/students/<your_intra_username>/VirtualBox VMs`
 2. Type `shasum VirtualBox.vdi` or whatever your Virtual Machine is called (This can take from a few seconds to 5 mins).
-3. Copy the output number and create a signature.txt file and paste that number in the file. 
-3. Now you submit the signature.txt file with the output number in it. 
+3. Copy the output number and create a signature.txt file and paste that number in the file.
 
 
-
-### Part 8 - Commands for UFW, Group, Host, lsblk and SSH
+### Commands for UFW, Group, Host, lsblk and SSH
 
 - `sudo ufw status`
 - `sudo systemctl status ssh`
