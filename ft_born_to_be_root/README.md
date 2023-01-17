@@ -103,15 +103,15 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ##
 ## Accessing The Virtual Machine
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
-1. Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
-2. Press `enter` on `English - English` or your language of preference.
-3. Press `enter` on `Australia` or the country your installing this Virtual Machine.
-4. Press `enter` on `American English` or your keyboard of preference.
-5. Create a Host Name as your login, with 42 at the end (eg. intraName42) 
-6. Leave Domain name blank, press `enter` on Continue.
-7. Create a Password for the Host Name
-8. Create a User Name without 42 at the end (eg. test_user)
-9. Create a Password for the User Name
+1.  Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
+2.  Press `enter` on `English - English` or your language of preference.
+3.  Press `enter` on `Australia` or the country your installing this Virtual Machine.
+4.  Press `enter` on `American English` or your keyboard of preference.
+5.  Create a `Host Name` as your login, with `42` at the end (eg. intraName42) 
+6.  Leave Domain name `blank`, press `enter` on Continue.
+7.  Create a `Password` for the Host Name
+8.  Create a `User Name without 42` at the end (eg. test_user)
+9.  Create a Password for the User Name
 10. Prss `enter` on your `Timezone`
 11. Press `enter` on `Guided - use entire disk and set up encrypted LVM`
 12. Press `enter` on Select Disk to Partition.
