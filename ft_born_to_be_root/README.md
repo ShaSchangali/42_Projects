@@ -190,9 +190,9 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 6. Type `sudo systemctl restart ssh` to restart the SSH Server
 7. Type `sudo service sshd status` to check the SSH Status
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
-9. if an error occurs Type `rm ~/.ssh/known_hosts` in iTerm 
-- Retype `ssh your_username@127.0.0.1 -p 4242`
-10. Type`exit` to quit SSH with iTerm Connection
+9. Type`exit` to quit SSH with iTerm Connection
+
+#### ⚠️ NOTE: If error occurs Type `rm ~/.ssh/known_hosts` in iTerm and Retype `ssh your_username@127.0.0.1 -p 4242`
 
 ##
 ### Setting Password Policy
