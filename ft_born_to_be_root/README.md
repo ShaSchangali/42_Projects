@@ -14,12 +14,22 @@
 ##
 ## Mandotary
 - Downloading Virtual Machine
-- Installing Virtual Machine
-- Starting Virtual Machine
-- Configurating Virtual Machine
+- Installing The Virtual Machine
+- Accessing The Virtual Machine
+- Starting The Virtual Machine
+- Configurating The Virtual Machine
+- Installing Git and Vim
+- Installing and Configuring SSH (Secure Shell Host)
+- Installing and Configuring UFW (Uncomplicated Firewall)
 - Connecting to SSH
-- Configurating Virtual Machine
-- Signature.txt
+- Setting Password Policy
+- Creating a Group
+- Creating a User and Assigning them Into The Group
+- Creating sudo.log
+- Configuring Sudoers Group
+- Crontab Configuation
+- Create script monitorig.sh
+- Creating Signature.txt
 - Overview Commands (UFW, Group, Host, lsblk and SSH)
 
 ##
@@ -256,7 +266,7 @@ Defaults	requiretty
 4. Type `chmod 777 monitoring.sh`
 ##
 ##
-### Copy script into monitorig.sh
+### Create script monitorig.sh
 #### ⚠️ NOTE: To copy the text below, hover with the mouse to the right corner of the text below and a copy icon will appear
 1. Copy text below
 ```
