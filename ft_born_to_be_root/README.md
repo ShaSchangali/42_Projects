@@ -389,42 +389,20 @@ MariaDB [(none)]> SHOW DATABASES;
 4. Type `sudo apt install php-cgi php-mysql` to Install php-cgi & php-mysql
 5. Type `dpkg -l | grep php` to check php-cgi & php-mysql as successfully installed
 
-
-
-#### Step 4: Downloading & Configuring WordPress
-Install *wget* via `sudo apt install wget`.
-```
-$ sudo apt install wget
-```
-Download WordPress to `/var/www/html` via `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html`.
-```
-$ sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
-```
-Extract downloaded content via `sudo tar -xzvf /var/www/html/latest.tar.gz`.
-```
-$ sudo tar -xzvf /var/www/html/latest.tar.gz
-```
-Remove tarball via `sudo rm /var/www/html/latest.tar.gz`.
-```
-$ sudo rm /var/www/html/latest.tar.gz
-```
-Copy content of `/var/www/html/wordpress` to `/var/www/html` via `sudo cp -r /var/www/html/wordpress/* /var/www/html`.
-```
-$ sudo cp -r /var/www/html/wordpress/* /var/www/html
-```
-Remove `/var/www/html/wordpress` via `sudo rm -rf /var/www/html/wordpress`
-```
-$ sudo rm -rf /var/www/html/wordpress
-```
-Create WordPress configuration file from its sample via `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php`.
-```
-$ sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
-```
+##
+##
+#### Downloading & Configuring WordPress
+5. Type `sudo apt install wget` to Install wget
+6. Type `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html` to download WordPress
+7. Type `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html` to download WordPress
+8. Type `sudo tar -xzvf /var/www/html/latest.tar.gz` to extract downloaded content
+9. Type `sudo rm /var/www/html/latest.tar.gz` to remove tarball
+10. Type `sudo cp -r /var/www/html/wordpress/* /var/www/html` to copy content of `/var/www/html/wordpress` to `/var/www/html`
+11. Type `/var/www/html/wordpress` to remove `/var/www/html/wordpress`
+12. Type `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php` to create WordPress configuration file
+13. Type `sudo vi /var/www/html/wp-config.php` to Configure WordPress to reference previously-created MariaDB database & user
 Configure WordPress to reference previously-created MariaDB database & user via `sudo vi /var/www/html/wp-config.php`.
-```
-$ sudo vi /var/www/html/wp-config.php
-```
-Replace the below
+14. Replace the below
 ```
 23 define( 'DB_NAME', 'database_name_here' );^M
 26 define( 'DB_USER', 'username_here' );^M
