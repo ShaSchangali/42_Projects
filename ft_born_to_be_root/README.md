@@ -422,27 +422,16 @@ $ sudo lighty-enable-mod fastcgi
 $ sudo lighty-enable-mod fastcgi-php
 $ sudo service lighttpd force-reload
 ```
+##
+##
+## File Transfer Protocol *(FTP)*
 
-### #3: File Transfer Protocol *(FTP)*
-
-#### Step 1: Installing & Configuring FTP
-Install FTP via `sudo apt install vsftpd`.
-```
-$ sudo apt install vsftpd
-```
-Verify whether *vsftpd* was successfully installed via `dpkg -l | grep vsftpd`.
-```
-$ dpkg -l | grep vsftpd
-```
-Allow incoming connections using Port 21 via `sudo ufw allow 21`.
-```
-$ sudo ufw allow 21
-```
-Configure *vsftpd* via `sudo vi /etc/vsftpd.conf`.
-```
-$ sudo vi /etc/vsftpd.conf
-```
-To enable any form of FTP write command, uncomment below line:
+1. Type `sudo apt install vsftpd` to install FTP
+2. Type `sdpkg -l | grep vsftpd` to check vsftpd was successfully installed
+3. Type `sudo ufw allow 21` to allow incoming connections using Port 21
+4. Type `sudo apt install vsftpd` to install FTP
+5. Type `sudo vi /etc/vsftpd.conf` to Configure ftp conf file
+6. To enable any form of FTP write command, uncomment below line:
 ```
 31 #write_enable=YES
 ```
@@ -457,6 +446,8 @@ user_sub_token=$USER
 local_root=/home/$USER/ftp
 <~~~>
 ```
+
+
 To prevent user from accessing files or using commands outside the directory tree, uncomment below line:
 ```
 114 #chroot_local_user=YES
