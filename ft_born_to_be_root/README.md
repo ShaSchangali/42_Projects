@@ -29,7 +29,7 @@
 - Installing PHP
 - Downloading & Configuring WordPress
 - Configuring Lighttpd
-##
+
 #### File Transfer Protocol (FTP)
 - Installing & Configuring FTP
 - Connecting to Server via FTP
@@ -43,6 +43,7 @@ Debian is a lot easier to update then CentOS when a new version is released. Deb
 
 ##
 ### What is a Virtual Machine?
+##
 Is a resource that uses software instead of a physical computer to run programs or apps. Each VM has its own operating system and functions separately, so you can have more than one VM per machine. Can be used to test applications in a safe, separate environment. Works by using software to simulate virtual hardware and run on a host machine.
 
 ##
@@ -53,27 +54,33 @@ Is a resource that uses software instead of a physical computer to run programs 
 
 ##
 ### What is AppArmor?
+##
 Linux security system that provides Mandatory Access Control (MAC) security. Allows the system admin to restrict the actions that processes can perform. It is included by default with Debian. Run aa-status to check if it is running.
 
 ##
 ### Password Rules
+##
 We using the password quality checking library and there are two files the common-password file which sets the rules like upper and lower case characters, duplicate characters etc and the login.defs file which stores the password expiration rules (30 days etc).
 * Sudo nano /etc/login.defs
 * Sudo nano /etc/pam.d/common-password
 
 ##
 ### What is LVM
+##
 Logical Volume Manager – allows us to easily manipulate the partitions or logical volume on a storage device.
 
 ##
-### UFW (Uncomplicated Firewall) 
+### UFW (Uncomplicated Firewall)
+##
 UFW is a interface to modify the firewall of the device without compromising security. You use it to configure which ports to allow connections to and which ports to close. This is useful in conjunction with SSH, can set a specific port for it to work with.
 
 ##
 ### What is SSH?
+##
 SSH or Secure Shell is an authentication mechanism between a client and a host. It uses encryption techniques so that all communication between clients and hosts is done in encrypted form. User on Mac or Linux can use SSH the terminal to work on their server via SSH.
 ##
 ### What is Cron?
+##
 Cron or cron job is a command line utility to schedule commands or scripts to happen at specific intervals or a specific time each day. Useful if you want to set your server to restart at a specific time each day. 
 ##
 - `cd /usr/local/bin` – to show monitoring.sh
