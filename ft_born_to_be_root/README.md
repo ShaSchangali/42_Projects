@@ -344,71 +344,52 @@ wall "	#Architecture: $arc
 - `sudo ufw status numbered`
 - `sudo ufw allow port-id`
 - `sudo ufw delete rule number`
-- `ssh your_user_id@127.0.0.1 -p 4242` -  do this in terminal to show that SSH to port 4242 is working
+- `ssh your_user_id@127.0.0.1 -p 4242` -  to show that SSH to port 4242 is working
 ##
 ##
 ## BONUS
 #### Installing Lighttpd
-Install *lighttpd* via `sudo apt install lighttpd`.
-```
-$ sudo apt install lighttpd
-```
-Verify whether *lighttpd* was successfully installed via `dpkg -l | grep lighttpd`.
-```
-$ dpkg -l | grep lighttpd
-```
-Allow incoming connections using Port 80 via `sudo ufw allow 80`.
-```
-$ sudo ufw allow 80
-```
+1. Type `sudo apt install lighttpd` to install lighttpd
+2. Type `dpkg -l | grep lighttpd` to check lighttpd was successfully installed
+3. Type `sudo ufw allow 80` to allow incoming connections using Port 80
+##
+##
+#### Installing & Configuring MariaDB
+1. Type `sudo apt install mariadb-server` to install mariadb-server
+2. Type `dpkg -l | grep mariadb-server` to check mariadb-serve was successfully installed
+3. Type `sudo mysql_secure_installation` Start interactive script to remove insecure default settings
 
-#### Step 2: Installing & Configuring MariaDB
-Install *mariadb-server* via `sudo apt install mariadb-server`.
-```
-$ sudo apt install mariadb-server
-```
-Verify whether *mariadb-server* was successfully installed via `dpkg -l | grep mariadb-server`.
-```
-$ dpkg -l | grep mariadb-server
-```
-Start interactive script to remove insecure default settings via `sudo mysql_secure_installation`.
-```
-$ sudo mysql_secure_installation
 Enter current password for root (enter for none): #Just press Enter (do not confuse database root with system root)
 Set root password? [Y/n] n
 Remove anonymous users? [Y/n] Y
 Disallow root login remotely? [Y/n] Y
 Remove test database and access to it? [Y/n] Y
 Reload privilege tables now? [Y/n] Y
+
+4. Type `sudo mariadb` to log in to the MariaDB console settings
 ```
-Log in to the MariaDB console via `sudo mariadb`.
+$ MariaDB [(none)]>
 ```
-$ sudo mariadb
-MariaDB [(none)]>
-```
-Create new database via `CREATE DATABASE <database-name>;`.
+5. Type `CREATE DATABASE <database-name>;` to create new database
 ```
 MariaDB [(none)]> CREATE DATABASE <database-name>;
 ```
-Create new database user and grant them full privileges on the newly-created database via `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;`.
-```
-MariaDB [(none)]> GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
-```
-Flush the privileges via `FLUSH PRIVILEGES;`.
+6. Type `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;` to Create new database user and grant them full privileges
+7. Type `FLUSH PRIVILEGES;` to flush the privileges
 ```
 MariaDB [(none)]> FLUSH PRIVILEGES;
 ```
-Exit the MariaDB shell via `exit`.
+8. type `exit` to exit the MariaDB shell
 ```
 MariaDB [(none)]> exit
 ```
-Verify whether database user was successfully created by logging in to the MariaDB console via `mariadb -u <username-2> -p`.
+9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
 ```
 $ mariadb -u <username-2> -p
 Enter password: <password-2>
 MariaDB [(none)]>
 ```
-Confirm whether database user has access to the database via `SHOW DATABASES;`.
+10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
 ```
 MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
@@ -418,7 +399,7 @@ MariaDB [(none)]> SHOW DATABASES;
 | information_schema |
 +--------------------+
 ```
-Exit the MariaDB shell via `exit`.
+11. Type `exit` to Exit the MariaDB shell
 ```
 MariaDB [(none)]> exit
 ```
