@@ -1,37 +1,36 @@
 ## Born2BeRoot
 
 ## Questions & Answers
-- Difference between Debian and CentOS?
-- What is a Virtual Machine?
-- What is the difference between aptitude and APT (Advanced Packaging Tool)?
-- What is AppArmor?
-- Password Rules
-- What is LVM?
-- UFW (Uncomplicated Firewall)
-- What is SSH?
-- What is Cron?
+#### - Difference between Debian and CentOS?
+#### - What is a Virtual Machine?
+#### - What is the difference between aptitude and APT (Advanced Packaging Tool)?
+#### - What is AppArmor?
+#### - Password Rules
+#### - What is LVM?
+#### - UFW (Uncomplicated Firewall)
+#### - What is SSH?
+#### - What is Cron?
 
 ## Mandotary
-- Downloading Virtual Machine
-- Installing Virtual Machine
-- Starting Virtual Machine
-- Configurating Virtual Machine
-- Connecting to SSH
-- Configurating Virtual Machine
-- Signature.txt
-- Overview Commands (UFW, Group, Host, lsblk and SSH)
+#### - Downloading Virtual Machine
+#### - Installing Virtual Machine
+#### - Starting Virtual Machine
+#### - Configurating Virtual Machine
+#### - Connecting to SSH
+#### - Configurating Virtual Machine
+#### - Signature.txt
+#### - Overview Commands (UFW, Group, Host, lsblk and SSH)
 
 ## Bonus
-#### Installation Lighttpd MariaDB PHP (LLMP)
-- Installing Lighttpd
-- Installing & Configuring MariaDB
-- Installing PHP
-- Downloading & Configuring WordPress
-- Configuring Lighttpd
+#### - Installing Lighttpd
+#### - Installing & Configuring MariaDB
+#### - Installing PHP
+#### - Downloading & Configuring WordPress
+#### - Configuring Lighttpd
 
 #### File Transfer Protocol (FTP)
-- Installing & Configuring FTP
-- Connecting to Server via FTP
+#### - Installing & Configuring FTP
+#### - Connecting to Server via FTP
 
 
 ## Questions & Answers
