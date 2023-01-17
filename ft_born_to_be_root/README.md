@@ -89,7 +89,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
 ##
 ##
-# ***MANDATORY***
+# *****MANDATORY*****
 ##
 # Downloading Virtual Machine
 1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
@@ -378,7 +378,7 @@ your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
 - `ssh your_user_id@127.0.0.1 -p 4242` -  to show that SSH to port 4242 is working
 ##
 ##
-# ***BONUS***
+# ****BONUS****
 ##
 ## Installing Lighttpd
 1. Type `sudo apt install lighttpd` to install lighttpd
