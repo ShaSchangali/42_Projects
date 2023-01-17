@@ -85,7 +85,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 
 ##
-## Installing The Virtual Machine
+### Installing The Virtual Machine
 1. Click `New`
 2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
 3. Set Memory Size to `1024 MB` and continue.
@@ -190,8 +190,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 6. Type `sudo systemctl restart ssh` to restart the SSH Server
 7. Type `sudo service sshd status` to check the SSH Status
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
-9. if an error occurs
- - Type `rm ~/.ssh/known_hosts` in iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
+9. if an error occurs Type `rm ~/.ssh/known_hosts` in iTerm 
+- Retype `ssh your_username@127.0.0.1 -p 4242`
 10. Type`exit` to quit SSH with iTerm Connection
 
 ##
@@ -199,11 +199,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so`
-4. Add this to the end of that line 
-- `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-5. The line should now look like this
-- `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-
+4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+- The line should now look like this `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 5. Save and Exit Vim
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
 7. Find this part `PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7`
@@ -298,20 +295,19 @@ wall "	#Architecture: $arc
 3. Type `cd /usr/local/bin`.
 4. Type `nano monitoring.sh` and paste the text into the vim monitoring.sh
 5. Save and Exit the `monitoring.sh` script
-- Type `exit` to exit the iTerm SSH Login.
-- Go back to the Virtual Machine and continue
-6. Type `sudo visudo` to open the sudoers file 
-7. Add this line `your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh`
+6. Type `exit` to exit the iTerm SSH Login.
+7. Type `sudo visudo` to open the sudoers file 
+8. Add this line `your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh`
 - ![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
-9. Then `exit` and `save` the sudoers file
+9. `Exit` and `Save` the sudoers file
 10. Type`sudo reboot` to reboot sudo
 11. Type `sudo /usr/local/bin/monitoring.sh` to execute  script as super user
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
-13. Add the following rulet  `*/10 * * * * /usr/local/bin/monitoring.sh` 
+13. Add following rule  `*/10 * * * * /usr/local/bin/monitoring.sh`
 - (this means that every 10 mins, this script will show)
 
 ##
-## Signature.txt 
+## Signature.txt
 ⚠️ Warning: before you generate a signature number, turn off your Virtual Machine. ⚠️
 
 1. Open iTerm and type `cd`
