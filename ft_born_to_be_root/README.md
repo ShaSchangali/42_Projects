@@ -200,7 +200,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so`
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-### Example:
+### Like this:
 - `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
