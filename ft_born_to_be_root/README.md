@@ -1,6 +1,6 @@
 ## Born2BeRoot
 
-#### Questions & Answers
+## Questions & Answers
 - Difference between Debian and CentOS?
 - What is a Virtual Machine?
 - What is the difference between aptitude and APT (Advanced Packaging Tool)?
@@ -78,12 +78,12 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - `cd /usr/local/bin` – to show monitoring.sh
 - `sudo crontab -u root -e` – to edit the cron job
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
-
+##
 ##
 ## Downloading Virtual Machine
 1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
-
+##
 ##
 ### Installing The Virtual Machine
 1. Click `New`
