@@ -181,7 +181,13 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Type `$ sudo systemctl status ssh` to check SSH server status
 3. Type `$ sudo vim /etc/ssh/sshd_config` to open sshd_config file with VIM
 4. Find line `#Port22` in sshd_config file
+```
+   #Port22
+```
 5. Change line to `Port 4242` without the # (Hash)
+```
+   Port22
+```
 6. Type `$ apt-get install git -y` to install Git
 7. Save and `exit` Vim with `:q`
 8. Type `sudo grep Port /etc/ssh/sshd_config` to check port settings
@@ -214,15 +220,26 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ## Setting Password Policy
 1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Type`sudo vim /etc/pam.d/common-password`
-3. Find this line. `password		requisite		pam_deny.so`
+
+3. Find the line below
+```
+    password		requisite		pam_deny.so
+```
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-### Like this:
-- `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+```
+    password		requisite	pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+```
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
-7. Find this part `PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7`
-8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
-9. Lastly type `sudo reboot` to reboot the change affects
+7. Find the line below
+```
+    PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7
+```
+8. Change that part to
+```
+    PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
+```
+9. Type `sudo reboot` to reboot the change affects
 ##
 ##
 ## Creating a Group
@@ -313,15 +330,22 @@ wall "	#Architecture: $arc
 4. Type `nano monitoring.sh` and paste the text into the vim monitoring.sh
 5. Save and Exit the `monitoring.sh` script
 6. Type `exit` to exit the iTerm SSH Login.
-7. Type `sudo visudo` to open the sudoers file 
-8. Add this line `your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh`
+7. Type `sudo visudo` to open the sudoers file
+8. Add the line below
+   ```
+  your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
+   ```
 - ![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
+
 9. `Exit` and `Save` the sudoers file
 10. Type`sudo reboot` to reboot sudo
 11. Type `sudo /usr/local/bin/monitoring.sh` to execute  script as super user
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
-13. Add following rule  `*/10 * * * * /usr/local/bin/monitoring.sh`
-- (this means that every 10 mins, this script will show)
+13. Add following rule 
+```
+// Every 10 mins, this script will show
+*/10 * * * * /usr/local/bin/monitoring.sh
+```
 ##
 ##
 ## Signature.txt
