@@ -22,7 +22,6 @@
 - Overview Commands (UFW, Group, Host, lsblk and SSH)
 
 ## Bonus
-#### Installation Lighttpd MariaDB PHP (LLMP)
 - Installing Lighttpd
 - Installing & Configuring MariaDB
 - Installing PHP
