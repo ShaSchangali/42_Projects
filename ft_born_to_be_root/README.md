@@ -95,7 +95,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 ##
 ##
-### Installing The Virtual Machine
+## Installing The Virtual Machine
 1. Click `New`
 2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
 3. Set Memory Size to `1024 MB` and continue.
@@ -259,14 +259,14 @@ Defaults	requiretty
 ![1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
 ##
 ##
-### Crontab Configuation
+## Crontab Configuation
 1. Type `apt-get install -y net-tools` to install the netstat tools
 2. Type `cd /usr/local/bin/`
 3. Type `touch monitoring.sh`
 4. Type `chmod 777 monitoring.sh`
 ##
 ##
-### Create script monitorig.sh
+## Create script monitorig.sh
 #### ⚠️ NOTE: To copy the text below, hover with the mouse to the right corner of the text below and a copy icon will appear
 1. Copy text below
 ```
@@ -326,7 +326,7 @@ wall "	#Architecture: $arc
 3. Copy the output number and create a signature.txt file and paste that number in the file.
 ##
 ##
-### Commands for UFW, Group, Host, lsblk and SSH
+## Commands for UFW, Group, Host, lsblk and SSH
 - `sudo ufw status`
 - `sudo systemctl status ssh`
 - `getent group sudo`
@@ -348,13 +348,13 @@ wall "	#Architecture: $arc
 ##
 ##
 ## BONUS
-#### Installing Lighttpd
+## Installing Lighttpd
 1. Type `sudo apt install lighttpd` to install lighttpd
 2. Type `dpkg -l | grep lighttpd` to check lighttpd was successfully installed
 3. Type `sudo ufw allow 80` to allow incoming connections using Port 80
 ##
 ##
-#### Installing & Configuring MariaDB
+## Installing & Configuring MariaDB
 1. Type `sudo apt install mariadb-server` to install mariadb-server
 2. Type `dpkg -l | grep mariadb-server` to check mariadb-serve was successfully installed
 3. Type `sudo mysql_secure_installation` Start interactive script to remove insecure default settings
@@ -383,17 +383,13 @@ MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
 ```
 11. Type `exit` to Exit the MariaDB shell
+##
+##
+## Installing PHP
+4. Type `sudo apt install php-cgi php-mysql` to Install php-cgi & php-mysql
+5. Type `dpkg -l | grep php` to check php-cgi & php-mysql as successfully installed
 
 
-#### Step 3: Installing PHP
-Install *php-cgi* & *php-mysql* via `sudo apt install php-cgi php-mysql`.
-```
-$ sudo apt install php-cgi php-mysql
-```
-Verify whether *php-cgi* & *php-mysql* was successfully installed via `dpkg -l | grep php`.
-```
-$ dpkg -l | grep php
-```
 
 #### Step 4: Downloading & Configuring WordPress
 Install *wget* via `sudo apt install wget`.
