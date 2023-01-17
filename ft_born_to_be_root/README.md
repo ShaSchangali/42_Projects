@@ -213,7 +213,7 @@ Port22
 6. Type `sudo systemctl restart ssh` to restart the SSH Server
 7. Type `sudo service sshd status` to check the SSH Status
 8. Open `iTerm` and type `ssh your_username@127.0.0.1 -p 4242`
-- ⚠️ If error occurs type `rm ~/.ssh/known_hosts` and retype `ssh your_username@127.0.0.1 -p 4242`
+#### ⚠️ If error occurs type `rm ~/.ssh/known_hosts` and retype `ssh your_username@127.0.0.1 -p 4242`
 9. Type`exit` to quit SSH with iTerm Connection
 ##
 ##
