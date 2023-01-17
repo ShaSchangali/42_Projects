@@ -373,8 +373,9 @@ Reload privilege tables now? [Y/n] Y
 8. type `exit` to exit the MariaDB shell
 9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
 10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
+11. Type `exit` to Exit the MariaDB shell
 ```
-MariaDB [(none)]> SHOW DATABASES;
+MariaDB [(none)]> SHOW exit;
 +--------------------+
 | Database           |
 +--------------------+
@@ -382,7 +383,7 @@ MariaDB [(none)]> SHOW DATABASES;
 | information_schema |
 +--------------------+
 ```
-11. Type `exit` to Exit the MariaDB shell
+
 ##
 ##
 ## Installing PHP
@@ -391,7 +392,7 @@ MariaDB [(none)]> SHOW DATABASES;
 
 ##
 ##
-#### Downloading & Configuring WordPress
+## Downloading & Configuring WordPress
 5. Type `sudo apt install wget` to Install wget
 6. Type `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html` to download WordPress
 7. Type `sudo tar -xzvf /var/www/html/latest.tar.gz` to extract downloaded content
@@ -400,7 +401,7 @@ MariaDB [(none)]> SHOW DATABASES;
 10. Type `/var/www/html/wordpress` to remove `/var/www/html/wordpress`
 11. Type `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php` to create WordPress configuration file
 12. Type `sudo vi /var/www/html/wp-config.php` to configure WordPress to reference previously-created MariaDB 
-13. Replace the below
+13. Replace the below lines
 ```
 23 define( 'DB_NAME', 'database_name_here' );^M
 26 define( 'DB_USER', 'username_here' );^M
@@ -412,8 +413,9 @@ with:
 26 define( 'DB_USER', '<username-2>' );^M
 29 define( 'DB_PASSWORD', '<password-2>' );^M
 ```
-
-#### Configuring Lighttpd
+##
+##
+## Configuring Lighttpd
 Enable below modules via `sudo lighty-enable-mod fastcgi; sudo lighty-enable-mod fastcgi-php; sudo service lighttpd force-reload`.
 ```
 $ sudo lighty-enable-mod fastcgi
