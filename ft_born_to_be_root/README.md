@@ -1,4 +1,4 @@
-## Born2BeRoot
+## Born2BeRoot - Guide
 
 ## Questions & Answers
 - Difference between Debian and CentOS?
@@ -45,7 +45,7 @@
 - Connecting to Server via FTP
 ##
 ## 
-## Questions & Answers
+# Questions & Answers
 
 ### Difference between Debian and CentOS?
 Debian is a lot easier to update then CentOS when a new version is released. Debian is more user-friendly and supports many libraries, filesystems and architecture. It also has more options for customisation. If you are a larger business CentOS offers more Enterprise features and excellent support for the Enterprise software.
