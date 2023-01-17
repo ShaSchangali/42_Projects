@@ -250,7 +250,7 @@ Defaults	logfile="/var/log/sudo.log"
 Defaults	log_input, log_output
 Defaults	requiretty
 ```
-[1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
+![1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
 
 ##
 ### Crontab Configuation
@@ -345,7 +345,7 @@ wall "	#Architecture: $arc
 
 ## BONUS
 
-#### Step 1: Installing Lighttpd
+#### Installing Lighttpd
 Install *lighttpd* via `sudo apt install lighttpd`.
 ```
 $ sudo apt install lighttpd
