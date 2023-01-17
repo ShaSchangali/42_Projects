@@ -160,14 +160,14 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 6. Type `usermod -aG sudo your_username` to add user in the sudo group 
 7. Type `getent group sudo` to check if user is in sudo group)
 8. Type `$ sudo visudo` to open sudoers filed
-9. Find in sudoers file `#User privilege specification and Add`
+9. Find in sudoers file
 ```
-   #User privilege specification and Add
+#User privilege specification and Add
 ```
-10. Add at the end `your_username ALL=(ALL)` inside the sudoers file
+10. Add below `your_username ALL=(ALL)`
 ```
-   #User privilege specification and Add
-   your_username ALL=(ALL)
+#User privilege specification and Add
+your_username ALL=(ALL)
 ```
 ##
 ##
@@ -180,11 +180,11 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 1. Type `$ sudo apt install openssh-server` to install openssh-server
 2. Type `$ sudo systemctl status ssh` to check SSH server status
 3. Type `$ sudo vim /etc/ssh/sshd_config` to open sshd_config file with VIM
-4. Find line `#Port22` in sshd_config file
+4. Find line below
 ```
    #Port22
 ```
-5. Change line to `Port 4242` without the # (Hash)
+5. replace line 
 ```
    Port22
 ```
@@ -223,11 +223,11 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 3. Find the line below
 ```
-    password		requisite		pam_deny.so
+    password requisite pam_deny.so
 ```
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 ```
-    password		requisite	pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+    password requisite pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
@@ -235,7 +235,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ```
     PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7
 ```
-8. Change that part to
+8. Replace line to
 ```
     PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
 ```
@@ -269,7 +269,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ##
 ## Configuring Sudoers Group
 1. Type `sudo nano /etc/sudoers` to open the sudoers file
-2. Edit sudoers fileto the the following by adding in all of the defaults
+2. Adding in sudoers file all of the defaults
 ```
 Defaults	env_reset
 Defaults	mail_badpass
@@ -335,7 +335,7 @@ wall "	#Architecture: $arc
    ```
   your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
    ```
-- ![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
+![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
 
 9. `Exit` and `Save` the sudoers file
 10. Type`sudo reboot` to reboot sudo
