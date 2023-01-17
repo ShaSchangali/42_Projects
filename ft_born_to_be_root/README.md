@@ -118,8 +118,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 13. Press `enter` on Select `Separate /home, /var, and /tmp paritions` 
 14. Select `Yes` and press `Enter` to write the changes to disks and configure LVM.
 15. Press `Enter` to `cancel` Erasing data.
-16. Create a Encryption passphrase
-17. Retype the Encryption passphrase that just created.
+16. Create a `Encryption` passphrase
+17. Retype the `Encryption` passphrase that just created.
 18. Type in `max`and press enter on `Continue` to assign the amount of volume group for partitioning.
 19. Press enter on `Finish partitioning and write changes to disk`. 
 20. Press enter on `Yes` for Partition Disks.
@@ -150,8 +150,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 6. Type `usermod -aG sudo your_username` to add user in the sudo group 
 7. Type `getent group sudo` to check if user is in sudo group)
 8. Type `$ sudo visudo` to open sudoers filed
-9. Find in sudoers file - #User privilege specification and Add
-10. Add `your_username ALL=(ALL)` to sudoers file
+9. Find in sudoers file `#User privilege specification and Add`
+10. Add at the end `your_username ALL=(ALL)` inside the sudoers file
 
 ##
 ## Installing Git and Vim
@@ -200,7 +200,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so`
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-- like this 
+- Example:
 - `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
