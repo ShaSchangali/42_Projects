@@ -311,19 +311,17 @@ wall "	#Architecture: $arc
 13. Add the following rulet  `*/10 * * * * /usr/local/bin/monitoring.sh` 
 - (this means that every 10 mins, this script will show)
 
-
+##
 ## Signature.txt 
-
 ⚠️ Warning: before you generate a signature number, turn off your Virtual Machine. ⚠️
 
 1. Open iTerm and type `cd`
-1. Type `cd sgoinfre/students/<your_intra_username>/VirtualBox VMs`
-2. Type `shasum VirtualBox.vdi` or whatever your Virtual Machine is called (This can take from a few seconds to 5 mins).
+1. Type `cd goinfre/students/<your_intra_username>/VirtualBox VMs`
+2. Type `shasum VirtualBox.vdi` or what the Virtual Machine is called
 3. Copy the output number and create a signature.txt file and paste that number in the file.
 
-
+##
 ### Commands for UFW, Group, Host, lsblk and SSH
-
 - `sudo ufw status`
 - `sudo systemctl status ssh`
 - `getent group sudo`
@@ -343,8 +341,8 @@ wall "	#Architecture: $arc
 - `sudo ufw delete rule number`
 - `ssh your_user_id@127.0.0.1 -p 4242` -  do this in terminal to show that SSH to port 4242 is working
 
+##
 ## BONUS
-
 #### Installing Lighttpd
 Install *lighttpd* via `sudo apt install lighttpd`.
 ```
