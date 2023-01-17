@@ -358,37 +358,20 @@ wall "	#Architecture: $arc
 1. Type `sudo apt install mariadb-server` to install mariadb-server
 2. Type `dpkg -l | grep mariadb-server` to check mariadb-serve was successfully installed
 3. Type `sudo mysql_secure_installation` Start interactive script to remove insecure default settings
-
+```
 Enter current password for root (enter for none): #Just press Enter (do not confuse database root with system root)
 Set root password? [Y/n] n
 Remove anonymous users? [Y/n] Y
 Disallow root login remotely? [Y/n] Y
 Remove test database and access to it? [Y/n] Y
 Reload privilege tables now? [Y/n] Y
-
+```
 4. Type `sudo mariadb` to log in to the MariaDB console settings
-```
-$ MariaDB [(none)]>
-```
 5. Type `CREATE DATABASE <database-name>;` to create new database
-```
-MariaDB [(none)]> CREATE DATABASE <database-name>;
-```
 6. Type `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;` to Create new database user and grant them full privileges
 7. Type `FLUSH PRIVILEGES;` to flush the privileges
-```
-MariaDB [(none)]> FLUSH PRIVILEGES;
-```
 8. type `exit` to exit the MariaDB shell
-```
-MariaDB [(none)]> exit
-```
 9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
-```
-$ mariadb -u <username-2> -p
-Enter password: <password-2>
-MariaDB [(none)]>
-```
 10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
 ```
 MariaDB [(none)]> SHOW DATABASES;
@@ -400,9 +383,7 @@ MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
 ```
 11. Type `exit` to Exit the MariaDB shell
-```
-MariaDB [(none)]> exit
-```
+
 
 #### Step 3: Installing PHP
 Install *php-cgi* & *php-mysql* via `sudo apt install php-cgi php-mysql`.
