@@ -399,18 +399,12 @@ Remove test database and access to it? [Y/n] Y
 Reload privilege tables now? [Y/n] Y
 ```
 4. Type `sudo mariadb` to log in to the MariaDB console settings
+```
+MariaDB [(none)]> 
+```
 5. Type `CREATE DATABASE <database-name>;` to create new database
-6. Type to Create new database user and grant them full privileges
 ```
-GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
-```
-7. Type `FLUSH PRIVILEGES;` to flush the privileges
-8. type `exit` to exit the MariaDB shell
-9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
-10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
-11. Type `exit` to Exit the MariaDB shell
-```
-MariaDB [(none)]> exit;
+MariaDB [(none)]> CREATE DATABASE <database-name>;
 +--------------------+
 | Database           |
 +--------------------+
@@ -418,7 +412,39 @@ MariaDB [(none)]> exit;
 | information_schema |
 +--------------------+
 ```
-
+6. Type to Create new database user and grant them full privileges
+```
+MariaDB [(none)]> GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
+```
+7. Type `FLUSH PRIVILEGES;` to flush the privileges
+```
+MariaDB [(none)]> FLUSH PRIVILEGES;
+```
+8. type `exit` to exit the MariaDB shell
+```
+MariaDB [(none)]> exit;
+```
+9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
+10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
+```
+MariaDB [(none)]>
++--------------------+
+| Database           |
++--------------------+
+| <database-name>    |
+| information_schema |
++--------------------+
+```
+11. Type `exit` to Exit the MariaDB shell
+```
+MariaDB [(none)]> exit
++--------------------+
+| Database           |
++--------------------+
+| <database-name>    |
+| information_schema |
++--------------------+
+```
 ##
 ##
 ## Installing PHP
