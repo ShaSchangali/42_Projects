@@ -99,7 +99,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 11. Click on the Virtual Machine file (.iso). 
 12. Click on created `Virtual Machine` and then click `'ok` to confirm you Virtual Machine Storage.
 13. Click `Start` (The Green Arrow ➡️) to start Virtual Machine.
-
+##
 ##
 ## Accessing The Virtual Machine
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
@@ -132,14 +132,14 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 27. Press `enter` on `Yes` to Install the GRUB boot loader on a hard disk.
 28. Press `enter` on /dev/sda
 29. Press `enter` on `continue` to finish the installation.
-
+##
 ##
 ## Starting The Virtual Machine
 1. Press enter on `Debian GNU/Linux` 
 2. Enter your `encryption password` that created before
 3. Login in as the `your_username` you that created before
 4. Type `lsblk` to see the partitions
-
+##
 ##
 ## Configurating The Virtual Machine
 1. Type `$ su -` to Login in as the root user.
@@ -152,12 +152,12 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 8. Type `$ sudo visudo` to open sudoers filed
 9. Find in sudoers file `#User privilege specification and Add`
 10. Add at the end `your_username ALL=(ALL)` inside the sudoers file
-
+##
 ##
 ## Installing Git and Vim
 1. Type `$ apt-get install git -y` to install Git
 2. Type `git --version` Check Git Version
-
+##
 ##
 ## Installing and Configuring SSH (Secure Shell Host)
 1. Type `$ sudo apt install openssh-server` to install openssh-server
@@ -169,7 +169,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 7. Save and `exit` Vim with `:q`
 8. Type `sudo grep Port /etc/ssh/sshd_config` to check port settings
 7. Type ` sudo service ssh restart` to restart the SSH service
-
+##
 ##
 ### Installing and Configuring UFW (Uncomplicated Firewall)
 1. Type `apt-get install ufw` to install UFW
@@ -178,7 +178,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 4. Type `sudo ufw allow ssh` to configure the Rules
 5. Type `sudo ufw allow 4242` to configure the Port Rules
 6. Type `sudo ufw status numbered` to check the status of UFW
-
+##
 ##
 ## Connecting to SSH
 #### ⚠️ NOTE: To exit Virtual Machine and use the mouse, press `command` on your Apple Keyboard
@@ -191,9 +191,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 7. Type `sudo service sshd status` to check the SSH Status
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
 9. Type`exit` to quit SSH with iTerm Connection
-
 - If error occurs in Step 8 Type `rm ~/.ssh/known_hosts` in iTerm Retype `ssh your_username@127.0.0.1 -p 4242`
-
+##
 ##
 ### Setting Password Policy
 1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
@@ -207,13 +206,13 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 7. Find this part `PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7`
 8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
 9. Lastly type `sudo reboot` to reboot the change affects
-
+##
 ##
 ### Creating a Group
 1. Type `sudo groupadd user42` to create a group
 2. Type`sudo groupadd evaluating` to create an evaluating group
 3. Type `getent group` to check if the group has been created
-
+##
 ##
 ### Creating a User and Assigning Them Into The Group
 1. Type `cut -d: -f1 /etc/passwd` to check all local users
@@ -224,7 +223,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 4. Type `getent group evaluating` to check the group
 5. Type `groups` to see which groups the user account belongs to
 6. Type `chage -l your_new_username` to check if the password rules are working
-
+##
 ##
 ### Creating sudo.log
 1. Type`cd ~/../`
@@ -232,7 +231,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 5. Type `mkdir sudo` (if it already exists, then continue to the next step).
 6. Type `cd sudo && touch sudo.log`
 7. Type `cd ~/../`
-
+##
 ##
 ### Configuring Sudoers Group
 1. Type `sudo nano /etc/sudoers` to open the sudoers file
@@ -248,14 +247,14 @@ Defaults	log_input, log_output
 Defaults	requiretty
 ```
 ![1*N4Ad-9k0vfvnWKNC5q6MjQ](https://user-images.githubusercontent.com/58959408/174725518-0ebf1dac-4126-4869-9ba0-b1d05ce313c9.png)
-
+##
 ##
 ### Crontab Configuation
 1. Type `apt-get install -y net-tools` to install the netstat tools
 2. Type `cd /usr/local/bin/`
 3. Type `touch monitoring.sh`
 4. Type `chmod 777 monitoring.sh`
-
+##
 ##
 ### Copy script into monitorig.sh
 #### ⚠️ NOTE: To copy the text below, hover with the mouse to the right corner of the text below and a copy icon will appear
@@ -306,7 +305,7 @@ wall "	#Architecture: $arc
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
 13. Add following rule  `*/10 * * * * /usr/local/bin/monitoring.sh`
 - (this means that every 10 mins, this script will show)
-
+##
 ##
 ## Signature.txt
 ⚠️ Warning: before you generate a signature number, turn off your Virtual Machine. ⚠️
@@ -315,7 +314,7 @@ wall "	#Architecture: $arc
 1. Type `cd goinfre/students/<your_intra_username>/VirtualBox VMs`
 2. Type `shasum VirtualBox.vdi` or what the Virtual Machine is called
 3. Copy the output number and create a signature.txt file and paste that number in the file.
-
+##
 ##
 ### Commands for UFW, Group, Host, lsblk and SSH
 - `sudo ufw status`
@@ -336,7 +335,7 @@ wall "	#Architecture: $arc
 - `sudo ufw allow port-id`
 - `sudo ufw delete rule number`
 - `ssh your_user_id@127.0.0.1 -p 4242` -  do this in terminal to show that SSH to port 4242 is working
-
+##
 ##
 ## BONUS
 #### Installing Lighttpd
