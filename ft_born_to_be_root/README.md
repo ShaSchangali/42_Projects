@@ -90,12 +90,12 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - `change script to */1 * * * * sleep 30s && script path` – to run it every 30 seconds, delete the line to stop the job from running.
 ##
 ##
-## Downloading Virtual Machine
+# Downloading Virtual Machine
 1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 2. Download `debian-mac-xx.x.x-amd64-netinst.iso`
 ##
 ##
-## Installing The Virtual Machine
+# Installing The Virtual Machine
 1. Click `New`
 2. Change Folder to `goinfre/students/your_intra_login/Virtual Machine Name` and click `continue`.
 3. Set Memory Size to `1024 MB` and continue.
@@ -111,7 +111,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 13. Click `Start` (The Green Arrow ➡️) to start Virtual Machine.
 ##
 ##
-## Accessing The Virtual Machine
+# Accessing The Virtual Machine
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
 1.  Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
 2.  Press `enter` on `English - English` or your language of preference.
@@ -144,14 +144,14 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 29. Press `enter` on `continue` to finish the installation.
 ##
 ##
-## Starting The Virtual Machine
+# Starting The Virtual Machine
 1. Press enter on `Debian GNU/Linux` 
 2. Enter your `encryption password` that created before
 3. Login in as the `your_username` you that created before
 4. Type `lsblk` to see the partitions
 ##
 ##
-## Configurating The Virtual Machine
+# Configurating The Virtual Machine
 1. Type `$ su -` to Login in as the root user.
 2. Type `apt-get update -y` to update the system
 3. Type `apt-get upgrade -y` to upgrade the system
@@ -161,7 +161,14 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 7. Type `getent group sudo` to check if user is in sudo group)
 8. Type `$ sudo visudo` to open sudoers filed
 9. Find in sudoers file `#User privilege specification and Add`
+```
+   #User privilege specification and Add
+```
 10. Add at the end `your_username ALL=(ALL)` inside the sudoers file
+```
+   #User privilege specification and Add
+   your_username ALL=(ALL)
+```
 ##
 ##
 ## Installing Git and Vim
