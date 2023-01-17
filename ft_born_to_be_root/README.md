@@ -192,9 +192,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
 9. Type`exit` to quit SSH with iTerm Connection
 
-#### ⚠️ NOTE: If error occurs in Step 8 
-#### Type `rm ~/.ssh/known_hosts` in iTerm 
-#### Retype `ssh your_username@127.0.0.1 -p 4242`
+#### ⚠️ NOTE: If error occurs in Step 8 Type `rm ~/.ssh/known_hosts` in iTerm Retype `ssh your_username@127.0.0.1 -p 4242`
 
 ##
 ### Setting Password Policy
@@ -202,8 +200,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so`
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-- The line should now look like this `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-5. Save and Exit Vim
+- like this `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
 7. Find this part `PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7`
 8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
@@ -211,20 +209,20 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 ##
 ### Creating a Group
-1. First type `sudo groupadd user42` to create a group
-2. Then type `sudo groupadd evaluating` to create an evaluating group
-3. Lastly type `getent group` to check if the group has been created
+1. Type `sudo groupadd user42` to create a group
+2. Type`sudo groupadd evaluating` to create an evaluating group
+3. Type `getent group` to check if the group has been created
 
 ##
 ### Creating a User and Assigning Them Into The Group
-1. First type `cut -d: -f1 /etc/passwd` to check all local users
-2. Type `sudo adduser new_username` to create a username - write down your new_username, as you will need this later on. 
-- 2.1 Type `sudo usermod -aG user42 your_username`
-- 2.2 Type `sudo usermod -aG evaluating your_new_username`
+1. Type `cut -d: -f1 /etc/passwd` to check all local users
+2. Type `sudo adduser new_username` to create a username 
+- Type `sudo usermod -aG user42 your_username`
+- Type `sudo usermod -aG evaluating your_new_username`
 3. Type `getent group user42` to check if the user is the group
 4. Type `getent group evaluating` to check the group
 5. Type `groups` to see which groups the user account belongs to
-6. Lastly type `chage -l your_new_username` to check if the password rules are working in users
+6. Type `chage -l your_new_username` to check if the password rules are working
 
 ##
 ### Creating sudo.log
