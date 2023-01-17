@@ -72,7 +72,6 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 
 ## Downloading Virtual Machine
-<img width="264" alt="Screen Shot 2022-06-24 at 12 18 12 PM" src="https://user-images.githubusercontent.com/58959408/175452234-79c7f008-10b2-4e4b-a602-95886d9e2508.png">
 
 1. Click link <ins>**https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/**
 
@@ -109,11 +108,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 ## Accessing The Virtual Machine
 #### ⚠️ NOTE: To increase the size, press `command` + `c` use the mouse to drag the screen to the size:
 
-<img width="666" alt="178788620-61064b58-0c0c-4f48-815e-60b4a8eaecae" src="https://user-images.githubusercontent.com/58959408/181727316-9a16b307-ea00-4116-a20a-261512f63a20.png">
-	
 1. Use the arrow keys on your keyboard 🔼 🔽 and press `Enter` on `Install`
-
-![1*-tV-M-4g6MH8h6pWJ27bCg](https://user-images.githubusercontent.com/58959408/174728861-fb9435a5-04e5-402c-80a3-f366c9b51be8.png)
 
 2. Press `enter` on `English - English` or your language of preference.
 
@@ -134,76 +129,43 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 10. Press `enter` on your `Timezone`
 
 11. Press `enter` on `Guided - use entire disk and set up encrypted LVM`
-	
-![1*CsSx-ALmn8mMxvWicsNVAQ](https://user-images.githubusercontent.com/58959408/174730389-03e5dcd7-9472-4cab-bf88-fe3cc4dc0f4c.png)
 
 12. Press `enter` on Select Disk to Partition.
-	
-![1*BTLz5sT6noL_SVQ7eq3u-A](https://user-images.githubusercontent.com/58959408/174730452-e267df43-2883-4760-85c4-010970fee329.png)
 
 13. Press `enter` on Select `Separate /home, /var, and /tmp paritions` 
 
-![1*r5zFPA7R_9BtIqwyOpCCVw](https://user-images.githubusercontent.com/58959408/174730481-2641b9c0-c50d-4f2b-9e71-3896a0760e10.png)
-
 14. Select `Yes` and press `Enter` to write the changes to disks and configure LVM.
 	
-![1*NHdo3JbApICz0Co2epPLFA](https://user-images.githubusercontent.com/58959408/174730521-780f5eb2-4955-48df-8c59-af9914674ee7.png)
-
 15. Press `Enter` to `cancel` Erasing data.
 	
-![1*KHmnCUJUWhf1minIdHNS4g](https://user-images.githubusercontent.com/58959408/174730626-c132041c-3070-405f-a8d8-60d620a1d770.png)
-
 16. Create a Encryption passphrase
 	
-![1*B0QL-gX7rZW5-RJyTD1uWw](https://user-images.githubusercontent.com/58959408/174730733-f306e051-4b0e-40de-93ab-56f2cdce45d5.png)
-
 17. Retype the Encryption passphrase that just created.
 	
-![1*xE1owXa0ttpvcioaEwnutA](https://user-images.githubusercontent.com/58959408/174730804-796f6db1-8b59-4f8e-900c-1416f957db30.png)
-
 18. Type in `max`and press enter on `Continue` to assign the amount of volume group for partitioning.
 	
-![1*SUFMu-qy3rBwIe9B0Bq3kg](https://user-images.githubusercontent.com/58959408/174730857-2de10217-3d42-41ca-8f43-fc91fddb64c6.png)
-
 19. Press enter on `Finish partitioning and write changes to disk`. 
 
 20. Press enter on `Yes` for Partition Disks.
 
 21. Press enter on `No` for Configure the package manager.
 	
-![1*Mfb1YHt4K3pZJ12TF2dXAw](https://user-images.githubusercontent.com/58959408/174730933-615891f8-d9fa-4312-ad78-d691bd648773.png)
-
 22. Press `enter` in the country that your in.
 
 23. Press `enter` on deb.debian.org.
 	
-![1*bLnFC6MebhW1-YZlI2n9_A](https://user-images.githubusercontent.com/58959408/174731066-6bef2e53-c891-477f-8a29-7e9984a6d911.png)
-
 24. Leave this blank and press `enter` on continue.
 	
-![1*e08pS8shLNmhZuFUrmuBwA](https://user-images.githubusercontent.com/58959408/174731175-bf4949d2-a832-4a1f-9282-c91195203c84.png)
-
 25. Press `enter` on `no` for Configuring popularity-contest.
 	
-![1*1I6fHG3MHuovrarqj9PNnA](https://user-images.githubusercontent.com/58959408/174731301-88d7c53d-f5e2-46c3-b221-a8b40f70f81f.png)
-
 26. Deselect `SSH server` and `standard system utilities` by pressing the `Space key` and  press `enter`
 	
-![1*lGsuAQEwT0WBhb4kdUMp9g](https://user-images.githubusercontent.com/58959408/174731387-b4859ded-9a9f-409a-a9c9-57d1ec77cbfd.png)
-
 27. Press `enter` on `Yes` to Install the GRUB boot loader on a hard disk.
 	
-![1*b2qXPye_kX8EudSvbO4yww](https://user-images.githubusercontent.com/58959408/174731448-b7b22a70-de87-4535-b8aa-3fb3294c9661.png)
-
 28. Press `enter` on /dev/sda
 	
-![174731491-7215eca8-f5e0-4862-a6ef-c49077c94cbe](https://user-images.githubusercontent.com/58959408/176393352-ed5223c7-ddf1-4c1f-97af-089be23572b2.png)
-
 29. Press `enter` on `continue` to finish the installation.
 	
-![1*riuXLYYgESxdq-lpkivFXQ](https://user-images.githubusercontent.com/58959408/174731601-b5949892-28b5-4b5a-94dd-9b50e6f0662b.png)
-
-
 ## Starting The Virtual Machine
 
 1. Press enter on `Debian GNU/Linux` 
@@ -262,9 +224,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 1. Go to your Virtual Box Program
 2. Click on your Virtual Machine and select `Settings`
 3. Click `Network` then `Adapter 1` then `Advanced` and then click on `Port Forwarding`
-![1*rCj_FeuZ5Rm2abz48qhulg](https://user-images.githubusercontent.com/58959408/174720900-39eda7e0-9be8-453c-94f1-4aa1a6b10951.png)
 4. Change the Host Port and Guest Port to `4242`
-![1*61-KSUCFcerO1wPqBcYISg](https://user-images.githubusercontent.com/58959408/174720987-e8de3bf9-2ffa-40ca-9d5c-4d0dea9d0b30.png)
 5. Then head back to your Virtual Machine
 6. Type `sudo systemctl restart ssh` to restart your SSH Server
 7. Type `sudo service sshd status` to check your SSH Status
@@ -279,11 +239,9 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Then type `sudo vim /etc/pam.d/common-password`
 
 3. Find this line. `password		requisite		pam_deny.so` or
-<img width="828" alt="Screen Shot 2022-07-29 at 6 40 34 PM" src="https://user-images.githubusercontent.com/58959408/181726262-8f8b7027-1929-4dda-8ac5-3957d3a1bd3a.png">
 4. Add this to the end of that line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 
 - 4.1 The line should now look like this - `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-<img width="800" alt="179329787-1b718843-9272-43e4-8d92-8d83933cc938" src="https://user-images.githubusercontent.com/58959408/181725921-c1e6c2b1-9dd3-46c5-b738-111467bdb394.png">
 
 5. Save and Exit Vim
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
