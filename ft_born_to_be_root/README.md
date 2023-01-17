@@ -405,12 +405,6 @@ MariaDB [(none)]>
 5. Type `CREATE DATABASE <database-name>;` to create new database
 ```
 MariaDB [(none)]> CREATE DATABASE <database-name>;
-+--------------------+
-| Database           |
-+--------------------+
-| <database-name>    |
-| information_schema |
-+--------------------+
 ```
 6. Type to Create new database user and grant them full privileges
 ```
@@ -427,7 +421,7 @@ MariaDB [(none)]> exit;
 9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
 10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
 ```
-MariaDB [(none)]>
+MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
 | Database           |
 +--------------------+
@@ -438,12 +432,6 @@ MariaDB [(none)]>
 11. Type `exit` to Exit the MariaDB shell
 ```
 MariaDB [(none)]> exit
-+--------------------+
-| Database           |
-+--------------------+
-| <database-name>    |
-| information_schema |
-+--------------------+
 ```
 ##
 ##
