@@ -192,7 +192,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
 9. Type`exit` to quit SSH with iTerm Connection
 
-#### ⚠️ NOTE: If error occurs in Step 8 Type `rm ~/.ssh/known_hosts` in iTerm Retype `ssh your_username@127.0.0.1 -p 4242`
+- If error occurs in Step 8 Type `rm ~/.ssh/known_hosts` in iTerm Retype `ssh your_username@127.0.0.1 -p 4242`
 
 ##
 ### Setting Password Policy
@@ -200,7 +200,8 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so`
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
-- like this `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
+- like this 
+- `password  requisite     pam_pwquality.so  retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
 7. Find this part `PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7`
