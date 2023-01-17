@@ -1,6 +1,7 @@
-# Libft Introduction
+# Libft 
+C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
 
-## Libft (Library of Functions)
+## Library of Functions
 
 Creating a library of functions, the file structure for this project is the following:
 
