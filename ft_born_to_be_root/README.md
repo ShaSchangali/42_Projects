@@ -184,7 +184,7 @@ your_username ALL=(ALL)
 ```
 #Port22
 ```
-5. replace line 
+5. Replace line 
 ```
 Port22
 ```
@@ -214,7 +214,8 @@ Port22
 7. Type `sudo service sshd status` to check the SSH Status
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
 9. Type`exit` to quit SSH with iTerm Connection
-- If error occurs in Step 8 Type `rm ~/.ssh/known_hosts` in iTerm Retype `ssh your_username@127.0.0.1 -p 4242`
+#### If error occurs type `rm ~/.ssh/known_hosts` in iTerm 
+#### and retype `ssh your_username@127.0.0.1 -p 4242`
 ##
 ##
 ## Setting Password Policy
