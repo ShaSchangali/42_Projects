@@ -1,17 +1,17 @@
 # Libft Introduction
 
-### Libft (Library of Functions)
+## Libft (Library of Functions)
 
 Creating a library of functions, the file structure for this project is the following:
 
-### .c Files 
-Where all functions will be written in. 
+## .c Files
+Where all functions will be written in.
 
-### .h (Header)
-All .c files will read it from the header file. 
+## .h (Header)
+All .c files will read it from the header file.
 
-### Makefile 
-A file to compile the projects. 
+## Makefile 
+A file to compile the projects.
 
 # Libft Functions
 

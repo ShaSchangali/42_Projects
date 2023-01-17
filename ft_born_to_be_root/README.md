@@ -1,4 +1,4 @@
-# Born2BeRoot - Guide
+# Born 2 BeRoot - Guide
 This project aims to introduce you to the wonderful world of virtualization. Creating a machine in VirtualBox under specific instructions and set up a Linux operating system while implementing strict rules in Shell.
 
 ## Questions & Answers
@@ -148,7 +148,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 # Starting The Virtual Machine
 1. Press enter on `Debian GNU/Linux` 
 2. Enter your `encryption password` that created before
-3. Login in as the `your_username` you that created before
+3. Login in as the `your_username` that created before
 4. Type `lsblk` to see the partitions
 ##
 ##
