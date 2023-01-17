@@ -1,6 +1,6 @@
 ## Born2BeRoot
 
-## Questions & Answers
+#### Questions & Answers
 - Difference between Debian and CentOS?
 - What is a Virtual Machine?
 - What is the difference between aptitude and APT (Advanced Packaging Tool)?
