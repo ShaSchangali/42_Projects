@@ -182,11 +182,11 @@ your_username ALL=(ALL)
 3. Type `$ sudo vim /etc/ssh/sshd_config` to open sshd_config file with VIM
 4. Find line below
 ```
-   #Port22
+#Port22
 ```
 5. replace line 
 ```
-   Port22
+Port22
 ```
 6. Type `$ apt-get install git -y` to install Git
 7. Save and `exit` Vim with `:q`
@@ -223,21 +223,21 @@ your_username ALL=(ALL)
 
 3. Find the line below
 ```
-    password requisite pam_deny.so
+password requisite pam_deny.so
 ```
 4. Add Line `minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 ```
-    password requisite pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+password requisite pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
 7. Find the line below
 ```
-    PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7
+PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7
 ```
 8. Replace line to
 ```
-    PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
+PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
 ```
 9. Type `sudo reboot` to reboot the change affects
 ##
@@ -333,7 +333,7 @@ wall "	#Architecture: $arc
 7. Type `sudo visudo` to open the sudoers file
 8. Add the line below
 ```
-    your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
+your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
 ```
 ![1*l-7LtAqCon1gRkV3dY3qiQ](https://user-images.githubusercontent.com/58959408/174727595-11dbb2f9-9c34-4d11-870b-f832ea4a9224.png)
 
@@ -343,7 +343,7 @@ wall "	#Architecture: $arc
 12. Type `sudo crontab -u root -e` to open the crontab and add the rule
 13. Add following rule 
 ```
-	*/10 * * * * /usr/local/bin/monitoring.sh
+*/10 * * * * /usr/local/bin/monitoring.sh
 ```
 ##
 ##
@@ -398,7 +398,10 @@ Reload privilege tables now? [Y/n] Y
 ```
 4. Type `sudo mariadb` to log in to the MariaDB console settings
 5. Type `CREATE DATABASE <database-name>;` to create new database
-6. Type `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;` to Create new database user and grant them full privileges
+6. Type to Create new database user and grant them full privileges
+```
+GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
+```
 7. Type `FLUSH PRIVILEGES;` to flush the privileges
 8. type `exit` to exit the MariaDB shell
 9. Type `mariadb -u <username-2> -p`to check  database user was successfully created by logging in to the MariaDB
