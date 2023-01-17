@@ -250,7 +250,7 @@ $ getent group sudo
 ```
 $ sudo visudo
 ```
-#### 9. Find in sudoers file - # User privilege specification
+#### 9. Find in sudoers file - # User privilege specification and Add
 ```
 $ your_username ALL=(ALL)
 ```
