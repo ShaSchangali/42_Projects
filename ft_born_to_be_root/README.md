@@ -39,9 +39,7 @@
 - Installing PHP
 - Downloading & Configuring WordPress
 - Configuring Lighttpd
-
-#### File Transfer Protocol (FTP)
-- Installing & Configuring FTP
+- Installing & Configuring (FTP)
 - Connecting to Server via FTP
 ##
 ## 
@@ -221,7 +219,7 @@ Port22
 1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Type`sudo vim /etc/pam.d/common-password`
 
-3. Find the line below
+3. Find line below
 ```
 password requisite pam_deny.so
 ```
@@ -231,11 +229,11 @@ password requisite pam_deny.so minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 rejec
 ```
 5. Save and `Exit Vim`
 6. Next type in your Virtual Machine `sudo vim /etc/login.defs`
-7. Find the line below
+7. Find line below 
 ```
 PASS_MAX_DAYS 9999` `PASS_MIN_DAYS 0` `PASS_WARN_AGE 7
 ```
-8. Replace line to
+8. Replace line
 ```
 PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
 ```
@@ -251,12 +249,12 @@ PASS_MAX_DAYS 30` `PASS_MIN_DAYS 2` `PASS_WARN_AGE 7
 ## Creating a User and Assigning Them Into The Group
 1. Type `cut -d: -f1 /etc/passwd` to check all local users
 2. Type `sudo adduser new_username` to create a username 
-- Type `sudo usermod -aG user42 your_username`
-- Type `sudo usermod -aG evaluating your_new_username`
-3. Type `getent group user42` to check if the user is the group
-4. Type `getent group evaluating` to check the group
-5. Type `groups` to see which groups the user account belongs to
-6. Type `chage -l your_new_username` to check if the password rules are working
+3. Type `sudo usermod -aG user42 your_username` to add `your_username` to `user42`
+4. Type `sudo usermod -aG evaluating your_new_username` to add `new_user` to group `evaluating`
+5. Type `getent group user42` to check if the user is the group
+6. Type `getent group evaluating` to check the group
+7. Type `groups` to see which groups the user account belongs to
+8. Type `chage -l your_new_username` to check if the password rules are working
 ##
 ##
 ## Creating sudo.log
@@ -367,7 +365,7 @@ your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh
 - `sudo chage -l username` - check password expire rules
 - `hostnamectl`
 - `hostnamectl set-hostname new_hostname` - to change the current hostname
-- Restart your Virtual Machine.
+- `sudo restart` - Restart the Virtual Machine.
 - `sudo nano /etc/hosts` - change current hostname to new hostname
 - `lsblk` to display the partitions
 - `dpkg -l | grep sudo –` to show that sudo is installed
@@ -408,7 +406,7 @@ GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<pas
 10. Type `SHOW DATABASES;` to confirm whether database user has access to the database via .
 11. Type `exit` to Exit the MariaDB shell
 ```
-MariaDB [(none)]> SHOW exit;
+MariaDB [(none)]> exit;
 +--------------------+
 | Database           |
 +--------------------+
@@ -484,7 +482,7 @@ local_root=/home/$USER/ftp
 ```
 114 #chroot_local_user=YES
 ```
-To whitelist FTP, add below lines:
+#### To whitelist FTP, add below lines:
 ```
 $ sudo vi /etc/vsftpd.userlist
 $ echo <username> | sudo tee -a /etc/vsftpd.userlist
