@@ -124,12 +124,13 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 27. Press `enter` on `Yes` to Install the GRUB boot loader on a hard disk.
 28. Press `enter` on /dev/sda
 29. Press `enter` on `continue` to finish the installation.
+
 ## Starting The Virtual Machine
 
 1. Press enter on `Debian GNU/Linux` 
-2. Enter your encryption password you had created before
-3. Login in as the your_username you had created before
-4. Type `lsblk` in your Virtual Machine to see the partition
+2. Enter your `encryption password` that created before
+3. Login in as the `your_username` you that created before
+4. Type `lsblk` in the Virtual Machine to see the partition
 
 ## Configurating The Virtual Machine
 
@@ -144,21 +145,21 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 9. Find in sudoers file - #User privilege specification and Add
 10. Add `your_username ALL=(ALL)` to sudoers file
 
-### Installing Git and Vim
+## Installing Git and Vim
 
 1. Type `$ apt-get install git -y` to install Git
 2. Type `git --version` Check Git Version
 
-### Installing and Configuring SSH (Secure Shell Host)
+## Installing and Configuring SSH (Secure Shell Host)
 
 1. Type `$ sudo apt install openssh-server` to install openssh-server
 2. Type `$ sudo systemctl status ssh` to check SSH server status
 3. Type `$ sudo vim /etc/ssh/sshd_config` to open sshd_config file with VIM
 4. Find this line `#Port22` in sshd_config file
-5. Change line to `Port 4242` without the # (Hash) in front of it
+5. Change line to `Port 4242` without the # (Hash)
 6. Type `$ apt-get install git -y` to install Git
-7. Save and Exit Vim
-8. Type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
+7. Save and `exit` Vim with `:q`
+8. Type `sudo grep Port /etc/ssh/sshd_config` to check port settings
 7. Type ` sudo service ssh restart` to restart the SSH service
 
 ### Installing and Configuring UFW (Uncomplicated Firewall)
@@ -168,7 +169,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 3. Type `sudo ufw status numbered` to check the status of UFW
 4. Type `sudo ufw allow ssh` to configure the Rules
 5. Type `sudo ufw allow 4242` to configure the Port Rules
-6. Type `sudo ufw status numbered` to check the status of UFW 4242 Port
+6. Type `sudo ufw status numbered` to check the status of UFW
 
 ## Connecting to SSH
 #### ⚠️ NOTE: To exit Virtual Machine and use the mouse, press `command` on your Apple Keyboard
@@ -176,11 +177,12 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 2. Click on the Virtual Machine and select `Settings`
 3. Click `Network` then `Adapter 1` then `Advanced` and then click on `Port Forwarding`
 4. Change the Host Port and Guest Port to `4242`
-5. go back to the your Virtual Machine
+5. Go back to the `Virtual Machine`
 6. Type `sudo systemctl restart ssh` to restart the SSH Server
 7. Type `sudo service sshd status` to check the SSH Status
 8. Open iTerm and type `ssh your_username@127.0.0.1 -p 4242`
-9. In case an error occurs, then type `rm ~/.ssh/known_hosts` in iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
+9. if an error occurs
+ - Type `rm ~/.ssh/known_hosts` in iTerm and then retype `ssh your_username@127.0.0.1 -p 4242`
 10. Type`exit` to quit SSH with iTerm Connection
 
 
@@ -200,13 +202,13 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 8. Change that part to `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2` keep `PASS_WARN_AGE 7` as the same
 9. Lastly type `sudo reboot` to reboot the change affects
 
-### Part 6.2 - Creating a Group
+### Creating a Group
 
 1. First type `sudo groupadd user42` to create a group
 2. Then type `sudo groupadd evaluating` to create an evaluating group
 3. Lastly type `getent group` to check if the group has been created
 
-### Part 6.3 - Creating a User and Assigning Them Into The Group
+### Creating a User and Assigning Them Into The Group
 
 1. First type `cut -d: -f1 /etc/passwd` to check all local users
 2. Type `sudo adduser new_username` to create a username - write down your new_username, as you will need this later on. 
