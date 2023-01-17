@@ -33,8 +33,6 @@
 - Connecting to Server via FTP
 
 
-
-
 ## Questions & Answers
 
 ### Difference between Debian and CentOS?
@@ -219,82 +217,34 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 
 ## Configurating The Virtual Machine
 
-#### 1. Login in as the root user.
-```
-$ su -
-```
-#### 2. Update the system
-```
-$ apt-get update -y
-```
-#### 3. Upgrade the system
-```
-$ apt-get upgrade -y
-```
-#### 4. Install sudo  
-```
-$ apt install sudo
-```
-#### 5. Check sudo was successfully installed
-```
-$ dpkg -l | grep sudo
-```
-#### 6. Add user in the sudo group 
-```
-$ usermod -aG sudo your_username
-```
-#### 7. Check if user is in sudo group)
-```
-$ getent group sudo
-```
-#### 8. Open sudoers file
-```
-$ sudo visudo
-```
-#### 9. Find in sudoers file - # User privilege specification and Add
-```
-$ your_username ALL=(ALL)
-```
+1. Type `$ su -` to Login in as the root user.
+2. Type `apt-get update -y` to update the system
+3. Type `apt-get upgrade -y` to upgrade the system
+4. Type `apt install sudo` to install sudo
+5. Type `a$ dpkg -l | grep sudo` to check sudo was successfully installed
+6. Type `usermod -aG sudo your_username` to add user in the sudo group 
+7. Type `getent group sudo` to check if user is in sudo group)
+8. Type `$ sudo visudo` to open sudoers filed
+9. Find in sudoers file - #User privilege specification and Add
+10. Add `your_username ALL=(ALL)` to sudoers file
 
 ### Installing Git and Vim
 
-1. install Git
-```
-$ apt-get install git -y
-```
-2. Check Git Version
-```
-$ git --version
-```
+1. Type `$ apt-get install git -y` to install Git
+2. Type `git --version` Check Git Version
 
 ### Installing and Configuring SSH (Secure Shell Host)
 
-1. Install openssh-server
-```
-$ sudo apt install openssh-server
-```
-2. Check SSH Server Status
-```
-$ sudo systemctl status ssh
-```
-3. Open sshd_config file with VIM
-```
-$ sudo vim /etc/ssh/sshd_config
-```
-4. Find this line `#Port22` 
+1. Type `$ sudo apt install openssh-server` to install openssh-server
+2. Type `$ sudo systemctl status ssh` to check SSH server status
+3. Type `$ sudo vim /etc/ssh/sshd_config` to open sshd_config file with VIM
+4. Find this line `#Port22` in sshd_config file
+5. Change line to `Port 4242` without the # (Hash) in front of it
+6. Type `$ apt-get install git -y` to install Git
+7. Save and Exit Vim
+8. Type `sudo grep Port /etc/ssh/sshd_config` to check if the port settings are right
+7. Type ` sudo service ssh restart` to restart the SSH service
 
-5. Change the line to `Port 4242` without the # (Hash) in front of it
-
-6. Save and Exit Vim
-
-7. Check if the port settings are right
-```
-$ sudo grep Port /etc/ssh/sshd_config
-```
-8. Restart the SSH Service 
-```
-$ sudo service ssh restart
-```
 
 ### Installing and Configuring UFW (Uncomplicated Firewall)
 
@@ -303,7 +253,7 @@ $ sudo service ssh restart
 3. Type `sudo ufw status numbered` to check the status of UFW
 4. Type `sudo ufw allow ssh` to configure the Rules
 5. Type `sudo ufw allow 4242` to configure the Port Rules
-6. Lastly Type `sudo ufw status numbered` to check the status of UFW 4242 Port
+6. Type `sudo ufw status numbered` to check the status of UFW 4242 Port
 
 
 ## Connecting to SSH
