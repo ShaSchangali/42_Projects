@@ -416,7 +416,7 @@ with:
 ##
 ##
 ## Configuring Lighttpd
-Enable below modules via `sudo lighty-enable-mod fastcgi; sudo lighty-enable-mod fastcgi-php; sudo service lighttpd force-reload`.
+Type and enable below modules
 ```
 $ sudo lighty-enable-mod fastcgi
 $ sudo lighty-enable-mod fastcgi-php
