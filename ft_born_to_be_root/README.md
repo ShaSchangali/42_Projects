@@ -171,7 +171,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 7. Type ` sudo service ssh restart` to restart the SSH service
 ##
 ##
-### Installing and Configuring UFW (Uncomplicated Firewall)
+## Installing and Configuring UFW (Uncomplicated Firewall)
 1. Type `apt-get install ufw` to install UFW
 2. Type `sudo ufw enable` to inable UFW
 3. Type `sudo ufw status numbered` to check the status of UFW
@@ -194,7 +194,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 - If error occurs in Step 8 Type `rm ~/.ssh/known_hosts` in iTerm Retype `ssh your_username@127.0.0.1 -p 4242`
 ##
 ##
-### Setting Password Policy
+## Setting Password Policy
 1. Type `sudo apt-get install libpam-pwquality` to install Password Quality Checking Library
 2. Type`sudo vim /etc/pam.d/common-password`
 3. Find this line. `password		requisite		pam_deny.so`
@@ -208,13 +208,13 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 9. Lastly type `sudo reboot` to reboot the change affects
 ##
 ##
-### Creating a Group
+## Creating a Group
 1. Type `sudo groupadd user42` to create a group
 2. Type`sudo groupadd evaluating` to create an evaluating group
 3. Type `getent group` to check if the group has been created
 ##
 ##
-### Creating a User and Assigning Them Into The Group
+## Creating a User and Assigning Them Into The Group
 1. Type `cut -d: -f1 /etc/passwd` to check all local users
 2. Type `sudo adduser new_username` to create a username 
 - Type `sudo usermod -aG user42 your_username`
@@ -225,7 +225,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 6. Type `chage -l your_new_username` to check if the password rules are working
 ##
 ##
-### Creating sudo.log
+## Creating sudo.log
 1. Type`cd ~/../`
 4. Type `cd var/log`
 5. Type `mkdir sudo` (if it already exists, then continue to the next step).
@@ -233,7 +233,7 @@ Cron or cron job is a command line utility to schedule commands or scripts to ha
 7. Type `cd ~/../`
 ##
 ##
-### Configuring Sudoers Group
+## Configuring Sudoers Group
 1. Type `sudo nano /etc/sudoers` to open the sudoers file
 2. Edit sudoers fileto the the following by adding in all of the defaults
 ```
