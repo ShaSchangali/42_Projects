@@ -16,37 +16,39 @@ Creating a library of functions, the file structure for this project is the foll
 
 ### Functions from `<string.h>`
 
-- [`ft_memset`](ft_memset.c)	- fill memory with a constant byte.
-- [`ft_strlen`](ft_strlen.c)	- calculate the length of a string.
-- [`ft_bzero`](ft_bzero.c)	- zero a byte string.
-- [`ft_memcpy`](ft_memcpy.c)	- copy memory area.
-- [`ft_memmove`](ft_memmove.c)	- copy memory area.
-- [`ft_strlcpy`](ft_strlcpy.c)	- copy string to an specific size.
-- [`ft_strlcat`](ft_strlcat.c)	- concatenate string to an specific size.
-- [`ft_strchr`](ft_strchr.c)	- locate character in string.
-- [`ft_strrchr`](ft_strrchr.c)	- locate character in string.
-- [`ft_strncmp`](ft_strncmp.c)	- compare two strings.
-- [`ft_memchr`](ft_memchr.c)	- scan memory for a character.
-- [`ft_memcmp`](ft_memcmp.c)	- compare memory areas.
-- [`ft_strnstr`](ft_strnstr.c)	- locate a substring in a string.
-- [`ft_strdup`](ft_strdup.c)	- creates a dupplicate for the string passed as parameter.
+
+- [`ft_strlen`](ft_strlen.c)			- calculate the length of a string.
+- [`ft_strlcpy`](ft_strlcpy.c)			- copy string to an specific size.
+- [`ft_strlcat`](ft_strlcat.c)			- concatenate string to an specific size.
+- [`ft_strchr`](ft_strchr.c)			- locate character in string.
+- [`ft_strrchr`](ft_strrchr.c)			- locate character in string.
+- [`ft_strncmp`](ft_strncmp.c)			- compare two strings.
+- [`ft_strnstr`](ft_strnstr.c)			- locate a substring in a string.
+- [`ft_strdup`](ft_strdup.c)			- creates a dupplicate for the string passed as parameter.
+- [`ft_bzero`](ft_bzero.c)				- zero a byte string.
+- [`ft_memset`](ft_memset.c)			- fill memory with a constant byte.
+- [`ft_memcpy`](ft_memcpy.c)			- copy memory area.
+- [`ft_memmove`](ft_memmove.c)			- copy memory area.
+- [`ft_memchr`](ft_memchr.c)			- scan memory for a character.
+- [`ft_memcmp`](ft_memcmp.c)			- compare memory areas.
+
 
 ### Functions from `<stdlib.h>`
-- [`ft_atoi`](ft_atoi.c)	- convert a string to an integer.
-- [`ft_calloc`](ft_calloc.c)	- allocates memory and sets its bytes' values to 0.
+- [`ft_atoi`](ft_atoi.c)				- convert a string to an integer.
+- [`ft_calloc`](ft_calloc.c)			- allocates memory and sets its bytes' values to 0.
 
 ### Non-standard functions
-- [`ft_substr`](ft_substr.c)	- returns a substring from a string.
-- [`ft_strjoin`](ft_strjoin.c)	- concatenates two strings.
-- [`ft_strtrim`](ft_strtrim.c)	- trims the beginning and end of string with specific set of chars.
-- [`ft_split`](ft_split.c)	- splits a string using a char as parameter.
-- [`ft_itoa`](ft_itoa.c)	- converts a number into a string.
-- [`ft_strmapi`](ft_strmapi.c)	- applies a function to each character of a string.
-- [`ft_striteri`](ft_striteri.c)	- applies a function to each character of a string.
+- [`ft_substr`](ft_substr.c)			- returns a substring from a string.
+- [`ft_strjoin`](ft_strjoin.c)			- concatenates two strings.
+- [`ft_strtrim`](ft_strtrim.c)			- trims the beginning and end of string with specific set of chars.
+- [`ft_split`](ft_split.c)				- splits a string using a char as parameter.
+- [`ft_itoa`](ft_itoa.c)				- converts a number into a string.
+- [`ft_strmapi`](ft_strmapi.c)			- applies a function to each character of a string.
+- [`ft_striteri`](ft_striteri.c)		- applies a function to each character of a string.
 - [`ft_putchar_fd`](ft_putchar_fd.c)	- output a char to a file descriptor.
-- [`ft_putstr_fd`](ft_putstr_fd.c)	- output a string to a file descriptor.
+- [`ft_putstr_fd`](ft_putstr_fd.c)		- output a string to a file descriptor.
 - [`ft_putendl_fd`](ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line.
-- [`ft_putnbr_fd`](ft_putnbr_fd.c)	- output a number to a file descriptor.
+- [`ft_putnbr_fd`](ft_putnbr_fd.c)		- output a number to a file descriptor.
 
 ### Linked list functions
 
