@@ -1,7 +1,7 @@
-# Libft Overview
+# Libft
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
 
-# Libft Functions Overview
+# Libft Functions
 Creating a library of functions, the file structure for this project is the following:
 
 ### Functions from `<ctype.h>`
