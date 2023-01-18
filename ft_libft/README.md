@@ -1,11 +1,10 @@
 # Libft
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
-
+##
 # Libft Functions
 Creating a library of functions, the file structure for this project is the following:
-
-### Functions from `<ctype.h>`
-
+##
+## Functions from `<ctype.h>`
 - [`ft_isalpha`](ft_isalpha.c)	- checks  for  an  alphabetic  character.
 - [`ft_isdigit`](ft_isdigit.c)	- checks for a digit (0 through 9).
 - [`ft_isalnum`](ft_isalnum.c)	- checks for an alphanumeric character.
@@ -13,10 +12,8 @@ Creating a library of functions, the file structure for this project is the foll
 - [`ft_isprint`](ft_isprint.c)	- checks for any printable character.
 - [`ft_toupper`](ft_toupper.c)	- convert char to uppercase.
 - [`ft_tolower`](ft_tolower.c)	- convert char to lowercase.
-
-### Functions from `<string.h>`
-
-
+##
+## Functions from `<string.h>`
 - [`ft_strlen`](ft_strlen.c)			- calculate the length of a string.
 - [`ft_strlcpy`](ft_strlcpy.c)			- copy string to an specific size.
 - [`ft_strlcat`](ft_strlcat.c)			- concatenate string to an specific size.
@@ -31,13 +28,12 @@ Creating a library of functions, the file structure for this project is the foll
 - [`ft_memmove`](ft_memmove.c)			- copy memory area.
 - [`ft_memchr`](ft_memchr.c)			- scan memory for a character.
 - [`ft_memcmp`](ft_memcmp.c)			- compare memory areas.
-
-
-### Functions from `<stdlib.h>`
+##
+## Functions from `<stdlib.h>`
 - [`ft_atoi`](ft_atoi.c)				- convert a string to an integer.
 - [`ft_calloc`](ft_calloc.c)			- allocates memory and sets its bytes' values to 0.
-
-### Non-standard functions
+##
+## Non-standard functions
 - [`ft_substr`](ft_substr.c)			- returns a substring from a string.
 - [`ft_strjoin`](ft_strjoin.c)			- concatenates two strings.
 - [`ft_strtrim`](ft_strtrim.c)			- trims the beginning and end of string with specific set of chars.
@@ -49,8 +45,8 @@ Creating a library of functions, the file structure for this project is the foll
 - [`ft_putstr_fd`](ft_putstr_fd.c)		- output a string to a file descriptor.
 - [`ft_putendl_fd`](ft_putendl_fd.c)	- output a string to a file descriptor, followed by a new line.
 - [`ft_putnbr_fd`](ft_putnbr_fd.c)		- output a number to a file descriptor.
-
-### Linked list functions
+##
+## Linked list functions
 
 - [`ft_lstnew`](ft_lstnew.c)	- creates a new list element.
 - [`ft_lstadd_front`](ft_lstadd_front.c)	- adds an element at the beginning of a list.
