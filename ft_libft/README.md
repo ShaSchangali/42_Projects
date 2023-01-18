@@ -1,20 +1,20 @@
-# Libft 
+# Libft Overview
 C programming can be very tedious when one doesn’t have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them.
 
 ## Library of Functions
 
 Creating a library of functions, the file structure for this project is the following:
 
-## .c Files
+# .c Files
 Where all functions will be written in.
 
-## .h (Header)
+# .h (Header)
 All .c files will read it from the header file.
 
-## Makefile 
+# Makefile 
 A file to compile the projects.
 
-# Libft Functions
+# Libft Functions Overview
 
 ### Functions from `<ctype.h>`
 
